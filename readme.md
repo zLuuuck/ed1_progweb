@@ -8,7 +8,7 @@
 <p>Marcelo Ribeiro Karpovicz</p>
 <br>
 <h2>Objetivos a serem alcançados:</h2>
-<ul>
+<ul style="text-align: justify">
     <li>( ) Criar uma aplicação Web com HTML, CSS e Javascript com duas páginas, uma de login e uma de produtos;</li>
     <li>( ) A página de login deve conter um formulário com os campos de usuário, senha e um botão de "entrar". O formulário deverá estar centralizado na página, dentro de uma caixa com bordas e fundo colorido. Ao apertar no botão de "entrar", deverá validar o usuário e senha do formulário utilizando javascript, se o usuário e senha estiverem incorretos apenas emita um alerta de "usuário ou senha inválidos";</li>
     <li>( ) A navegação na página de produtos deverá ser possível através de um menu, realizando uma ancoragem com o conteúdo da página, colocar no menu os produtos ou categorias dos produtos;</li>
