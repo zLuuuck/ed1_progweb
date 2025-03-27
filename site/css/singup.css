@@ -1,3 +1,65 @@
-div.cadastro {
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    font-family: sans-serif;
+    margin: 0;
+    height: 100vh
+}
+
+.cadastro-page-container {
+    background-color: white;
+    padding: 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    height: auto;
     text-align: center;
+}
+
+.cadastro-page-container h2 {
+    margin-bottom: 50px;
+}   
+
+.input-group {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccc;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 100%;
+    padding-top: 20px;
+    padding: 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover {
+    background: #0056b3;
+}
+
+.user_terms{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.login-link {
+    margin-top: 20px;
+    font-size: 14px;
 }

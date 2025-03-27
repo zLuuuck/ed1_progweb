@@ -56,18 +56,8 @@ body {
 }
 .btn:hover {
     background: #0056b3;
-}.btn {
-    width: 100%;
-    padding: 10px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
-.btn:hover {
-    background: #0056b3;
-}
+
 .register-link {
     margin-top: 20px;
     font-size: 14px;

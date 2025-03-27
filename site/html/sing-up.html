@@ -8,29 +8,37 @@
 </head>
 <body>
     
-    <div class="cadastro" id="cadastro" >
+    <div class="cadastro-page-container" >
+
+        <h2>Cadastro</h2>
 
         <form method="post" action="">
-            <h1>Cadastro</h1>
-            <p>
-                <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome" required>
-            </p>
-            <p>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required>
-            </p>
-            <p>
-                <label for="senha">Senha:</label>
-                <input type="password" name="senha" id="senha" required>
-            </p>
-            <p>
-                <label for="confirmar_senha">Confirmar Senha:</label>
-                <input type="password" name="confirmar_senha" id="confirmar_senha" required>
-            </p>
-            <p>
-                <button name="enviar_cadastro" id="enviar_cadastro" ="submit">Enviar Cadastro</button>
-            </p>
+            <div class="cadastro-form">
+                <div class="input-group">
+                    <label for="username">Nome de Usuário</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <label for="password-confirm">Confirme a senha</label>
+                    <input type="password" id="password-confirm" name="password-confirm">
+                </div>
+                <div class="user_terms">
+                    <label for="user_terms">Li e aceito com os Termos de uso</label>
+                    <input type="checkbox" id="user_terms" name="user_terms">
+                </div>
+                <button class="btn" type="submit">Registra-se</button>
+                <div class="login-link">
+                    <p>Já tem uma conta? Faça <a href="./login.html">login</a></p>
+                </div>
+            </div>
         </form>
 
     </div>
