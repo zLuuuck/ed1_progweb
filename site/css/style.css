@@ -9,7 +9,7 @@ div.landing-navbar {
     z-index: 100;
 }
 
-.singup-page-a, .login-page-a {
+.singup-page-a, .login-page-a, .home-page-a, .products-page-a {
     display: inline-block;
     position: absolute;
     padding: 12px 24px;
@@ -32,7 +32,15 @@ div.landing-navbar {
     top: 50px;
     right: 160px;
 }
-.singup-page-a:hover, .login-page-a:hover {
+.home-page-a {
+    top: 50px;
+    right: 300px;
+}
+.products-page-a {
+    top: 50px;
+    right: 440px;
+}
+.singup-page-a:hover, .login-page-a:hover, home-page-a:hover, product-page-a:hover {
     background-color: #000000;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     transform: scale(0.95);
