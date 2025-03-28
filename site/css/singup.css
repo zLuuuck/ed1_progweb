@@ -139,3 +139,12 @@ a:hover {
     border-radius: 4px;
     display: none;
 }
+
+#msgSuccess {
+    text-align: center;
+    color: green;
+    background-color: #7be67b;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}

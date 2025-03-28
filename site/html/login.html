@@ -13,16 +13,17 @@
     <div class="formulario-login">
         <div class="c">
             <h2>Login</h2>
-            <div id="msgError"></div>
-            <form action="" method="post">
+            <div id="msgSuccess" class="success-message"></div>
+            <div id="msgError" class="error-message"></div>
+            <form action="../scripts/login-page.js" method="post">
                 <div class="label-float">
-                    <input type="text" id="usuario" name="usuario" required>
-                    <label id="userLabel" for="usuario">Usuário</label>
+                    <input type="text" id="userInput" name="userInput" required>
+                    <label id="userLabel" for="userInput">Usuário</label>
                 </div>
                 
                 <div class="label-float">
-                    <input type="password" id="senha" name="senha" required>
-                    <label id=senha for="senha">Senha</label>
+                    <input type="password" id="senhaInput" name="senhaInput" required>
+                    <label id=senhaLabel for="senhaInput">Senha</label>
                     <i class="fa fa-eye" aria-hidden="true"></i>
                 </div>
                 <div class="justify-center">

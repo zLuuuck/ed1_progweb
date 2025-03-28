@@ -92,7 +92,23 @@ senhaConfirm.addEventListener("keyup", () => {
 
 function singup() {
     if (validUser && validEmail && validSenha && validSenhaConfirm) {
-        let listaUsers = JSON.parse(localStorage.getItem('listaUser') || '[]')
+        // Corrigido para usar o mesmo nome de chave ('listaUsers')
+        let listaUsers = JSON.parse(localStorage.getItem('listaUsers') || '[]')
+
+        const emailExistente = listaUsers.some(user => user.email === email.value);
+        const userExistente = listaUsers.some(user => user.nome === user.value);
+        if (emailExistente) {
+            msgError.setAttribute('style', 'display: block')
+            msgError.innerHTML = 'Este email já está cadastrado!'
+            msgSuccess.setAttribute('style', 'display: none')
+            return;
+        }
+        if (userExistente) {
+            msgError.setAttribute('style', 'display: block')
+            msgError.innerHTML = 'Este usuário já está cadastrado!'
+            msgSuccess.setAttribute('style', 'display: none')
+            return;
+        }
 
         listaUsers.push({
             nome: user.value,
@@ -102,8 +118,7 @@ function singup() {
 
         localStorage.setItem('listaUsers', JSON.stringify(listaUsers))
 
-        msgSuccess.setAttribute('style', 'display: block')
-        msgSuccess.innerHTML = 'Cadastro realizado com sucesso!'
+        showSuccess('Cadastro realizado com sucesso! Você será redirecionado para a tela de login!')
         msgError.setAttribute('style', 'display: none')
         msgError.innerHTML = ''
         
@@ -115,7 +130,13 @@ function singup() {
         msgError.innerHTML = 'Preencha todos os campos corretamente!'
         msgSuccess.setAttribute('style', 'display: none')
         msgSuccess.innerHTML = ''
-    
-        
     }
-};
+}
+
+function showSuccess(message) {
+    const msgSuccess = document.querySelector("#msgSuccess");
+    msgSuccess.textContent = message;
+    msgSuccess.style.display = "block";
+    msgSuccess.style.color = "green";
+    document.querySelector("button[type='button']").disabled = true;
+}

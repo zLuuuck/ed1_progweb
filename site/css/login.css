@@ -51,6 +51,7 @@ h2 {
     padding-right: 40px;
     display: inline-block;
     border: 0;
+    border-color: #000000;
     border-bottom: 2px solid #000000;
     background-color: transparent;
     outline: none;
@@ -135,6 +136,15 @@ a:hover {
     text-align: center;
     color: #ff0000;
     background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+#msgSuccess {
+    text-align: center;
+    color: green;
+    background-color: #7be67b;
     padding: 10px;
     border-radius: 4px;
     display: none;
