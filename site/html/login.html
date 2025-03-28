@@ -5,34 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../css/login.css">
-    <script src="../scripts/login-page.js"></script>
+    <script src="https://kit.fontawesome.com/0dc50eaa4b.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
-<!-- pagina de login -> usuario e senha, caixa de lembrar de mim e link para se cadastrar -->
-    <div class="login-page-container" >
-        <h2>Login</h2>
-        <form action="../scripts/login-page.js" method="post" >
-            <div class="login-form">
-                <div class="input-group">
-                    <label for="username">Usuário</label>
-                    <input type="text" id="username" name="username" required>
+
+    <div class="formulario-login">
+        <div class="c">
+            <h2>Login</h2>
+            <div id="msgError"></div>
+            <form action="" method="post">
+                <div class="label-float">
+                    <input type="text" id="usuario" name="usuario" required>
+                    <label id="userLabel" for="usuario">Usuário</label>
                 </div>
-                <div class="input-group">
-                    <label for="password">Senha</label>
-                    <input type="password" id="password" name="password" required>
+                
+                <div class="label-float">
+                    <input type="password" id="senha" name="senha" required>
+                    <label id=senha for="senha">Senha</label>
+                    <i class="fa fa-eye" aria-hidden="true"></i>
                 </div>
-                <div class="remember-me">
-                    <input type="checkbox" id="remember-me" name="remember-me">
-                    <label for="remember-me">Lembrar de mim</label>
+                <div class="justify-center">
+                    <button type="button" onclick="login()">Entrar</button>
                 </div>
-                <button class="btn" type="submit">Login</button>
-                <div class="register-link">
-                    <p>Ainda não tem uma conta? <a href="./sing-up.html">Registre-se</a></p>
-                </div>
-            </div>
-        </form>
+                <p> Ainda não tem conta? <a href="./singup.html">Crie uma!</a> </p>
+            </form>
+        </div>
     </div>
 
+    <script src="../scripts/login-page.js"></script>
 </body>
 </html>
