@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     margin: 0;
 }
 
@@ -24,7 +24,7 @@ body {
 .c {
     background-color: #ffffff;
     width: 450px;
-    height: 700px;
+    height: 750px;
     padding: 30px;
     border-radius: 4%;
     box-shadow: 3px 3px 1px 0px #000000;

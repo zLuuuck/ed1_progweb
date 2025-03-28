@@ -29,7 +29,7 @@ function login() {
 
     listaUsers = JSON.parse(localStorage.getItem("listaUsers"));
 
-    listaUsers?.forEach((item) => {
+    listaUsers.forEach((item) => {
         if (user.value == item.userCad && password.value == item.passwordCad) {
             userValido = {
                 user: item.userCad,

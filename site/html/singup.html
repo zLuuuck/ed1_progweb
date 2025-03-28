@@ -15,10 +15,11 @@
             <h2>Registrar-se</h2>
             <div id="msgError"></div>
             <div id="msgSuccess"></div>
-            <form action="" method="post">
+
+            <form action="../scripts/singup-page.js" method="post">
                 <div class="label-float">
-                    <input type="text" id="usuario" name="usuario" required>
-                    <label id="userioLabel" for="usuario">Usuário</label>
+                    <input type="text" id="userInput" name="userInput" required>
+                    <label id="userLabel" for="userInput">Usuário</label>
                 </div>
                 
                 <div class="label-float">
@@ -27,8 +28,8 @@
                 </div>
 
                 <div class="label-float">
-                    <input type="password" id="senha" name="senha" required>
-                    <label id="senhaLabel" for="senha">Senha</label>
+                    <input type="password" id="senhaInput" name="senhaInput" required>
+                    <label id="senhaLabel" for="senhaInput">Senha</label>
                     <i id="fa-eye" class="fa fa-eye" aria-hidden="true"></i>
                 </div>
 

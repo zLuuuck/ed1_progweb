@@ -17,16 +17,16 @@ document.querySelectorAll(".fa-eye").forEach((btn) => {
 });
 
 
-let user = document.querySelector("#usuario");
-let userLabel = document.querySelector("#usuariolabel");
+let user = document.querySelector("#userInput");
+let userLabel = document.querySelector("#userLabel");
 let validUser = false;
 
 let email = document.querySelector("#email");
 let emailLabel = document.querySelector("#emailLabel");
 let validEmail = false;
 
-let senha = document.querySelector("#senha");
-let senhaLabel = document.querySelector("#senhalabel");
+let senha = document.getElementById("senhaInput");
+let senhaLabel = document.getElementById("senhaLabel");
 let validSenha = false;
 
 let senhaConfirm = document.querySelector("#confirmarSenha");
@@ -37,25 +37,25 @@ let msgError = document.querySelector("#msgError");
 let msgSuccess = document.querySelector("#msgSuccess");
 
 user.addEventListener("keyup", () => {
-    if (nome.value.length <= 2) {
-        labelNome.setAttribute('style', 'color: red')
-        labelNome.innerHTML = 'Nome *Insira no minimo 3 caracteres'
-        nome.setAttribute('style', 'border-color: red')
-        validNome = false
+    if (user.value.length <= 3) {
+        userLabel.setAttribute('style', 'color: red')
+        userLabel.innerHTML = 'Nome *Insira no minimo 3 caracteres'
+        user.setAttribute('style', 'border-color: red')
+        validUser = false
     } else {
-        labelNome.setAttribute('style', 'color: green')
-        labelNome.innerHTML = 'Nome'
-        nome.setAttribute('style', 'border-color: green')
-        validNome = true
+        userLabel.setAttribute('style', 'color: green')
+        userLabel.innerHTML = 'Nome'
+        user.setAttribute('style', 'border-color: green')
+        validUser = true
     }
 });
 
 email.addEventListener("keyup", () => {
     if (email.value.indexOf('@') === -1 || email.value.indexOf('.') === -1) {
-        emailLabel.setAttribute('style', 'color: red')
-        emailLabel.innerHTML = 'Email *Insira um email válido'
-        email.setAttribute('style', 'border-color: red')
-        validEmail = false
+        emailLabel.setAttribute('style', 'color: red; ');
+        emailLabel.innerHTML = 'Email *Insira um email válido';
+        email.setAttribute('style', 'border-color: red;');
+        validEmail = false;
     } else {
         emailLabel.setAttribute('style', 'color: green')
         emailLabel.innerHTML = 'Email'
@@ -91,7 +91,7 @@ senhaConfirm.addEventListener("keyup", () => {
 });
 
 function singup() {
-    if (validNome && validEmail && validSenha && validSenhaConfirm) {
+    if (validUser && validEmail && validSenha && validSenhaConfirm) {
         let listaUsers = JSON.parse(localStorage.getItem('listaUser') || '[]')
 
         listaUsers.push({
@@ -108,7 +108,7 @@ function singup() {
         msgError.innerHTML = ''
         
         setTimeout(()=>{
-            window.location.href = '../html/signin.html'
+            window.location.href = '../html/login.html'
         }, 3000)
     } else {
         msgError.setAttribute('style', 'display: block')
