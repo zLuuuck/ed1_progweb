@@ -8,10 +8,6 @@ body {
     background-color: gray;
 }
 
-div.products {
-    text-align: center;
-}
-
 nav a {
     color: #fff;
     text-decoration: none;
@@ -55,4 +51,14 @@ nav {
     height: 2px;
     background: #fff;
     margin: 8px
+}
+
+.products {
+    align-items: center;
+    text-align: center;
+}
+
+.products h1 {
+    padding-top: 50px;
+    color: #fff;
 }
