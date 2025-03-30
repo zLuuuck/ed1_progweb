@@ -8,13 +8,13 @@ body {
     background-color: gray;
 }
 
-a {
+nav a {
     color: #fff;
     text-decoration: none;
     transition: 0.3s;
 }
 
-a:hover {
+.navbar a:hover {
     opacity: 0.7;
 }
 
@@ -51,4 +51,20 @@ nav {
     height: 2px;
     background: #fff;
     margin: 8px
+}
+
+.landing-page h1 {
+    color: #fff;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.contato {
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.contato h2 {
+    color: #fff;
 }

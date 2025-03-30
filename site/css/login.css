@@ -6,19 +6,19 @@
 }
 
 body {
-    background-color: #c8c8c8;
+    background-color: gray;
     justify-content: center;
     align-items: center;
 
 }
 
 nav a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     transition: 0.3s;
 }
 
-.navbar a:hover {
+nav a:hover {
     opacity: 0.7;
 }
 
@@ -171,11 +171,11 @@ a {
     color: #000000;
     font-weight: bold;
     text-decoration: none;
-    transition: all .3s ease-out;
+    transition: 0.3s ease-out;
 }
 
-a:hover {
-    color: #1400ec;
+.formulario-login a:hover {
+    color: #1500ff;
 }
 
 #msgError {

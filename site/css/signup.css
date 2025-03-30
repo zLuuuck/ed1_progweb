@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #c8c8c8;
+    background-color: gray;
     justify-content: center;
     align-items: center;
 
@@ -18,7 +18,7 @@ nav a {
     transition: 0.3s;
 }
 
-.navbar a:hover {
+nav a:hover {
     opacity: 0.7;
 }
 
@@ -58,7 +58,7 @@ nav {
 }
 
 .formulario-signup {
-    height: 100vh;
+    height: 93vh;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -172,7 +172,7 @@ a {
     transition: all .3s ease-out;
 }
 
-a:hover {
+.formulario-signup a:hover {
     color: #1400ec;
 }
 
