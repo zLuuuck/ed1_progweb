@@ -1,3 +1,64 @@
-div.products {
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: gray;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #23232e;
+    height: 8vh;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+}
+.navbar li {
+    margin-left: 32px;
+    letter-spacing: 3px;
+}
+
+.mobile-menu {
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px
+}
+
+.products {
+    align-items: center;
     text-align: center;
+}
+
+.products h1 {
+    padding-top: 50px;
+    color: #fff;
 }

@@ -6,15 +6,61 @@
 }
 
 body {
-    background-color: #c8c8c8;
-    display: flex;
+    background-color: gray;
     justify-content: center;
     align-items: center;
-    height: 90vh;
-    margin: 0;
+
 }
 
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #23232e;
+    height: 8vh;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+}
+.navbar li {
+    margin-left: 32px;
+    letter-spacing: 3px;
+}
+
+.mobile-menu {
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px
+}
+
+
 .formulario-login {
+    height: 90vh;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,11 +171,11 @@ a {
     color: #000000;
     font-weight: bold;
     text-decoration: none;
-    transition: all .3s ease-out;
+    transition: 0.3s ease-out;
 }
 
-a:hover {
-    color: #1400ec;
+.formulario-login a:hover {
+    color: #1500ff;
 }
 
 #msgError {
