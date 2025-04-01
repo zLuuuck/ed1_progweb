@@ -23,9 +23,7 @@ async function login() {
     try {
         const listaUsers = JSON.parse(localStorage.getItem("listaUsers") || "[]");
         
-        const usuarioEncontrado = listaUsers.find(user => 
-            user.nome === usernameInput || user.email === usernameInput
-        );
+        const usuarioEncontrado = listaUsers.find(user => user.nome === usernameInput);
 
         if (!usuarioEncontrado) {
             showError("Usuário ou senha incorretos!");
@@ -48,7 +46,7 @@ async function login() {
         showSuccess("Login realizado com sucesso!");
 
         setTimeout(() => {
-            window.location.href = "../html/products.html";
+            window.location.href = "/site/html/index.html";
         }, 5000);
 
     } catch (error) {

@@ -123,7 +123,7 @@ function singup() {
         msgError.innerHTML = ''
         
         setTimeout(()=>{
-            window.location.href = '../html/login.html'
+            window.location.href = '/site/html/conta/login.html'
         }, 3000)
     } else {
         msgError.setAttribute('style', 'display: block')
