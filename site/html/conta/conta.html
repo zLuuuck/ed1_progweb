@@ -25,10 +25,16 @@
         </nav>
     </header>
 
-    <h1>Conta</h1>
-    <h2 id="user_logado_nome"></h2>
-
-    <button type="button" onclick="logout()">Sair</button>
+    <div class="container">
+        <h1>Minha Conta</h1>
+        <h2 id="user_logado_nome">Olá, [Nome do Usuário]</h2>
+    
+        <div class="account-options">
+            <button onclick="verPedidos()">📦 Meus Pedidos</button>
+            <button onclick="editarPerfil()">⚙️ Editar Perfil</button>
+            <button onclick="logout()">🚪 Sair</button>
+        </div>
+    </div>
 
     <script src="../../scripts/conta.js"></script>
 </body>
