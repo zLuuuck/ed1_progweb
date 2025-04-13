@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Produtos</title>
     <link rel="stylesheet" href="../css/products.css">
+    <script src="https://kit.fontawesome.com/0dc50eaa4b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <nav>
             <a class="logo" href="/site/html/index.html">Gurizões Gamers</a>
-            <div class="mobile-menu">
+            <div class="mobile-menu" onclick="toggleMenu()">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
@@ -27,61 +28,18 @@
         <h1>Produtos em Destaque</h1>
         <div class="products-container">
             <div class="product-card">
-                <img src="" alt="">
-                <h2></h2>
-                <p></p>
-                <button>Ver Detalhes</button>
-            </div>
-            <div class="product-card">
-                <img src="" alt="">
-                <h2</h2>
-                <p></p>
-                <button>Ver Detalhes</button>
-            </div>
-            <div class="product-card">
-                <img src="" alt="">
-                <h2></h2>
-                <p></p>
-                <button>Ver Detalhes</button>
-            </div>
-            <div class="product-card">
-                <img src="" alt="">
-                <h2></h2>
-                <p></p>
-                <button>Ver Detalhes</button>
-            </div>
-            <div class="product-card">
-                <img src="" alt="">
-                <h2></h2>
-                <p></p>
-                <button>Ver Detalhes</button>
-            </div>
-            <div class="product-card">
-                <img src="" alt="">
-                <h2></h2>
-                <p></p>
-                <button>Ver Detalhes</button>
-            </div>
-            <div class="product-card">
-                <img src="" alt="">
-                <h2></h2>
-                <p></p>
-                <button>Ver Detalhes</button>
-            </div>
-            <div class="product-card">
-                <img src="" alt="">
-                <h2></h2>
-                <p></p>
-                <button>Ver Detalhes</button>
-            </div>
-            <div class="product-card">
-                <img src="" alt="">
-                <h2></h2>
-                <p></p>
+                <h2>Produto 1</h2>
+                <p>Descrição do produto 1</p>
                 <button>Ver Detalhes</button>
             </div>
         </div>
     </div>
 
+    <script>
+        function toggleMenu() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

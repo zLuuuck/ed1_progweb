@@ -19,6 +19,7 @@ nav {
     background: #23232e;
     height: 8vh;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 0 20px;
 }
 
 .logo {
@@ -37,6 +38,7 @@ nav {
 .navbar {
     list-style: none;
     display: flex;
+    transition: 0.5s;
 }
 
 .navbar li {
@@ -70,9 +72,21 @@ nav a {
     width: 100%;
 }
 
+/* Menu hambúrguer */
 .mobile-menu {
     cursor: pointer;
     display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mobile-menu .line1,
+.mobile-menu .line2,
+.mobile-menu .line3 {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s ease;
 }
 
 .products {
@@ -137,4 +151,27 @@ nav a {
 
 .product-card button:hover {
     box-shadow: 0 0 15px #00f5ff;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 100%;
+        background-color: #23232e;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
 }

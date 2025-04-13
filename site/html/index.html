@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site de loja</title>
+    <title>Gurizões Gamers</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/0dc50eaa4b.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-
     <header>
         <nav>
             <a class="logo" href="/site/html/index.html">Gurizões Gamers</a>
-            <div class="mobile-menu">
+            <div class="mobile-menu" onclick="toggleMenu()">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
@@ -26,8 +24,23 @@
             </ul>
         </nav>
     </header>
+
     <div class="landing-page">
         <h1>O Seu PC Gamer Perfeito</h1>
         <p>Desempenho extremo, estilo único e os melhores preços para você dominar todos os jogos.</p>
         <a href="/site/html/products.html"><button class="cta-button">Nossos Produtos</button></a>
     </div>
+
+    <section class="contato" id="contato">
+        <h2>Fale com a gente</h2>
+        <p>Email: suporte@gurizoesgamers.com<br>Telefone: (41) 99999-9999</p>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

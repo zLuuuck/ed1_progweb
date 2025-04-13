@@ -19,6 +19,8 @@ nav {
     background: #23232e;
     height: 8vh;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1000;
 }
 
 .logo {
@@ -73,6 +75,7 @@ nav a {
 .mobile-menu {
     cursor: pointer;
     display: none;
+    flex-direction: column;
 }
 
 .mobile-menu div {
@@ -132,4 +135,40 @@ nav a {
     font-size: 32px;
     margin-bottom: 20px;
     color: #00f5ff;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 100%;
+        background-color: #23232e;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+
+    .landing-page h1 {
+        font-size: 32px;
+    }
+
+    .landing-page p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
 }

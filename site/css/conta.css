@@ -10,14 +10,18 @@
 body {
     background: linear-gradient(135deg, #1a1a2e, #0f0c29);
     color: #ffffff;
+    min-height: 100vh;
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background: #23232e;
+    padding: 0 30px;
     height: 8vh;
+    flex-wrap: wrap;
+    position: relative;
 }
 
 .logo {
@@ -27,6 +31,7 @@ nav {
     color: #00f5ff;
     font-weight: bold;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 .logo:hover {
@@ -36,10 +41,11 @@ nav {
 .navbar {
     list-style: none;
     display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .navbar li {
-    margin-left: 32px;
     letter-spacing: 3px;
 }
 
@@ -70,15 +76,16 @@ nav a {
 }
 
 .mobile-menu {
-    cursor: pointer;
     display: none;
+    flex-direction: column;
+    cursor: pointer;
 }
 
 .mobile-menu div {
     width: 32px;
     height: 2px;
     background: #fff;
-    margin: 8px;
+    margin: 6px;
 }
 
 .container {
@@ -129,10 +136,38 @@ nav a {
     color: #ffffff;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: flex;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background-color: #23232e;
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        padding: 20px;
+        display: none;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
     .container {
-        margin: 30px 20px;
+        margin: 40px 20px;
         padding: 30px 20px;
+    }
+
+    .container h1 {
+        font-size: 26px;
+    }
+
+    .container h2 {
+        font-size: 18px;
     }
 
     .account-options button {
@@ -144,15 +179,19 @@ nav a {
         font-size: 20px;
         letter-spacing: 2px;
     }
+}
 
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
+@media (max-width: 480px) {
+    .container {
+        padding: 25px 15px;
     }
 
-    nav {
-        flex-direction: column;
-        height: auto;
-        padding: 10px 0;
+    .account-options button {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 18px;
     }
 }
