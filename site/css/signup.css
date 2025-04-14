@@ -233,3 +233,22 @@ a {
     border-radius: 4px;
     display: none;
 }
+
+footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 1rem;
+    border-top: 2px solid #00f5ff;
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    margin: 0 0.5rem;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+ 
+.social-icons a:hover {
+    color: #00f5ff;
+}
