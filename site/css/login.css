@@ -1,34 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Orbitron', sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, #2c2b36, #05013a);
+    background: linear-gradient(135deg, #1a1a2e, #0f0c29);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     justify-content: center;
     align-items: center;
-
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    opacity: 0.7;
-}
-
-.logo {
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
 }
 
 nav {
@@ -37,44 +22,78 @@ nav {
     align-items: center;
     background: #23232e;
     height: 8vh;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+.logo {
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #00f5ff;
+    font-weight: bold;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.logo:hover {
+    text-shadow: 0 0 10px #00f5ff;
 }
 
 .navbar {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
 .navbar li {
     margin-left: 32px;
     letter-spacing: 3px;
 }
 
-.mobile-menu {
-    cursor: pointer;
-    display: none;
+nav a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-.mobile-menu div {
-    width: 32px;
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
     height: 2px;
-    background: #fff;
-    margin: 8px
+    background: #00f5ff;
+    bottom: -4px;
+    left: 0;
+    transition: 0.3s ease;
 }
 
+.navbar a:hover {
+    color: #00f5ff;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
 
 .formulario-login {
-    height: 90vh;
-    margin: 0;
+    height: calc(100vh - 8vh);
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 20px;
 }
 
 .c {
     background-color: #ffffff;
     width: 450px;
-    height: 575px;
-    padding: 30px;
+    max-width: 100%;
+    height: auto;
+    padding: 30px 25px;
     border-radius: 4%;
     box-shadow: 3px 3px 1px 0px #000000;
 }
@@ -82,8 +101,9 @@ nav {
 h2 {
     text-align: center;
     margin-bottom: 20px;
-    padding-top: 40px;
-    padding-bottom: 55px
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-size: 26px;
 }
 
 .label-float {
@@ -91,16 +111,15 @@ h2 {
     padding-top: 13px;
     margin-top: 5%;
     margin-bottom: 5%;
-    padding-bottom: 30px
+    padding-bottom: 30px;
 }
 
 .label-float input {
     width: 100%;
-    padding: 5px 5px;
+    padding: 8px 10px;
     padding-right: 40px;
     display: inline-block;
     border: 0;
-    border-color: #000000;
     border-bottom: 2px solid #000000;
     background-color: transparent;
     outline: none;
@@ -113,6 +132,8 @@ h2 {
 .label-float i {
     position: absolute;
     right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
     font-size: 20px;
     color: #000000;
@@ -132,8 +153,8 @@ h2 {
     transition: all .3s ease-out;
 }
 
-.label-float input:focus+label,
-.label-float input:valid+label {
+.label-float input:focus + label,
+.label-float input:valid + label {
     font-size: 13px;
     margin-top: 0;
     color: #1500ff;
@@ -146,15 +167,14 @@ button {
     margin: 0 auto;
     width: 100%;
     background-color: transparent;
-    border-color: #000000;
+    border: 2px solid #000000;
     color: #000000;
     padding: 10px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 20px;
     border-radius: 4px;
     cursor: pointer;
-    outline: none;
     transition: all .4s ease-out;
 }
 
@@ -164,7 +184,7 @@ button:hover {
 }
 
 p {
-    padding-top: 50px;
+    padding-top: 30px;
     color: #000000;
     font-size: 14pt;
     text-align: center;
@@ -188,6 +208,7 @@ a {
     padding: 10px;
     border-radius: 4px;
     display: none;
+    font-size: 14px;
 }
 
 #msgSuccess {
@@ -197,4 +218,91 @@ a {
     padding: 10px;
     border-radius: 4px;
     display: none;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .c {
+        width: 100%;
+        border-radius: 12px;
+        padding: 20px 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .label-float input {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    p {
+        font-size: 13pt;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 18px;
+    }
+
+    .navbar li {
+        margin-left: 0;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 12pt;
+    }
+}
+
+footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 1rem;
+    border-top: 2px solid #00f5ff;
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    margin: 0 0.5rem;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+ 
+.social-icons a:hover {
+    color: #00f5ff;
 }

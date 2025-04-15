@@ -1,17 +1,39 @@
-if (localStorage.getItem("token") == null) {
-    alert('Você precisa estar logado para acessar essa página!');
-    window.location.href = "/site/html/conta/login.html";
+function toggleMenu() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('active');
 }
 
-let userLogado = JSON.parse(localStorage.getItem("userLogado"));
+document.getElementById('formulario').addEventListener('submit', function (e) {
+    e.preventDefault(); // impede redirecionamento
 
-let user = document.querySelector("#logado");
-logado.innerHTML = 'Olá, ${userLogado.nome}';
+    const form = e.target;
+    const data = new FormData(form);
 
-function logout() {
-    localStorage.removeItem("token");
-    localStorage.removeItem("userLogado");
-    alert('Você saiu da sua conta!');
-    window.location.href = "/site/html/conta/login.html";
+    fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            showSuccess("E-mail enviado com sucesso!");
+            form.reset(); // limpa o formulário
+        }
+    })
+});
+
+function showSuccess(message) {
+    const msgSuccess = document.querySelector("#msgSuccess");
+    msgSuccess.textContent = message;
+    msgSuccess.style.display = "block";
+    msgSuccess.style.color = "green";
+    document.querySelector("button[type='button']").disabled = true;
 }
 
+function showError(message) {
+    const msgError = document.querySelector("#msgError");
+    msgError.textContent = message;
+    msgError.style.display = "block";
+    msgError.style.color = "red";
+}
