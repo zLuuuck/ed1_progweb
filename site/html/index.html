@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://kit.fontawesome.com/0dc50eaa4b.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
         <nav>
@@ -24,27 +26,82 @@
             </ul>
         </nav>
     </header>
+    <div class="main-content">
+        <div class="landing-page">
+            <h1>O Seu PC Gamer Perfeito</h1>
+            <p>Desempenho extremo, estilo único e os melhores preços para você dominar todos os jogos.</p>
+            <a href="/site/html/products.html"><button class="cta-button">Nossos Produtos</button></a>
+        </div>
 
-    <div class="landing-page">
-        <h1>O Seu PC Gamer Perfeito</h1>
-        <p>Desempenho extremo, estilo único e os melhores preços para você dominar todos os jogos.</p>
-        <a href="/site/html/products.html"><button class="cta-button">Nossos Produtos</button></a>
+        <section class="contato" id="contato">
+            <h2>NÓS FAZEMOS SEU COMPUTADOR PERSONALIZADO!</h2>
+            <div class="container-contato">
+                <div class="texto-contato">
+                    <p>
+                        Chega de PC fraco: o seu setup dos sonhos começa aqui!<br><br>
+                        Já pensou em ter um computador montado exatamente pra você? Nada de peças aleatórias ou máquinas
+                        que travam nos melhores momentos. Com a Gurizões Gamers, você recebe um PC feito sob medida —
+                        com potência, estilo e desempenho de sobra pra qualquer jogo ou projeto pesado.
+                        <br><br>
+                        🎮 Quer rodar tudo no ultra? A gente monta.
+                        <br><br>
+                        🖥️ Faz live, edita vídeos ou trabalha com gráficos pesados? Temos a configuração ideal.
+                        <br><br>
+                        💡 Quer um gabinete com RGB insano e design de outro mundo? Também fazemos!
+                        <br><br>
+                        Preencha o formulário ao lado e diga como é o PC dos seus sonhos. Nós cuidamos de tudo: escolha
+                        das peças, montagem, testes e suporte.
+                        <br><br>
+                        Você sonha. A gente monta. Bora deixar seu setup lendário?
+                    </p>
+                </div>
+                <div class="formulario-contato">
+                    <h2>Formulário</h2>
+                    <form id="formulario" method="POST" action="https://formsubmit.co/toterol.contato@gmail.com"  target="_blank">
+                        <div id="msgSuccess" class="success-message"></div>
+                        <div id="msgError" class="error-message"></div>
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_autoresponse" value="Recebemos sua mensagem!">
+                        <div class="nome-sobrenome">
+                            <div class="label-float">
+                                <label for="nomeInput">Nome</label>
+                                <input type="text" id="nomeInput" name="nomeInput" required>
+                            </div>
+                            <div class="label-float">
+                                <label for="sobrenomeInput">Sobrenome</label>
+                                <input type="text" id="sobrenomeInput" name="sobrenomeInput" required>
+                            </div>
+                        </div>
+                        <div class="label-float">
+                            <label for="emailInput">E-mail</label>
+                            <input type="email" id="emailInput" name="emailInput" required>
+                        </div>
+                        <div class="label-float">
+                            <label for="telInput">Telefone</label>
+                            <input type="tel" id="telInput" name="telInput" required placeholder="(xx) xxxxx-xxxx">
+                        </div>
+                        <div class="label-float">
+                            <label for="assunto">Mensagem</label>
+                            <textarea id="assunto" name="assunto" required
+                                placeholder="Digite sua mensagem aqui"></textarea>
+                        </div>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </div>
-
-    <section class="contato" id="contato">
-        <h2>Fale com a gente</h2>
-        <p>Email: suporte@gurizoesgamers.com<br>Telefone: (41) 99999-9999</p>
-    </section>
-
     <footer>
         <p>&copy; 2025 Gurizões Gamers Foda-se. Todos os direitos reservados nessa porra.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-twitch"></i></a>
-            </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitch"></i></a>
+        </div>
     </footer>
 
     <script src="../scripts/inicio.js"></script>
 </body>
+
 </html>
