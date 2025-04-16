@@ -235,11 +235,18 @@ a {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: #1a1a1a;
     text-align: center;
     padding: 1rem;
     border-top: 2px solid #00f5ff;
-    margin-top: 2rem;
+    color: #ffffff;
+}
+
+footer p{
+    color:#ffffff;
 }
 
 .social-icons a {

@@ -182,15 +182,18 @@ nav a {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    color: white;
     background-color: #1a1a1a;
     text-align: center;
-    border-top: 2px solid #00f5ff;
-    margin-top: 2rem;
     padding: 1rem;
-    bottom: 0;
+    border-top: 2px solid #00f5ff;
+    color: #ffffff;
+}
+
+footer p{
+    color:#ffffff;
 }
 
 .social-icons a {
@@ -199,7 +202,7 @@ footer {
     font-size: 1.2rem;
     transition: color 0.3s;
 }
- 
+
 .social-icons a:hover {
     color: #00f5ff;
 }
