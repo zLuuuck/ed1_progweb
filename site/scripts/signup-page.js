@@ -16,6 +16,10 @@ document.querySelectorAll(".fa-eye").forEach((btn) => {
     });
 });
 
+function toggleMenu() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('active');
+}
 
 let user = document.querySelector("#userInput");
 let userLabel = document.querySelector("#userLabel");

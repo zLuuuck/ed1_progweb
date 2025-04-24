@@ -9,10 +9,10 @@
 
 </head>
 <body>
-    <header>
+    <header class="cabeçalho">
         <nav>
             <a class="logo" href="/site/html/index.html">Gurizões Gamers</a>
-            <div class="mobile-menu">
+            <div class="mobile-menu" onclick="toggleMenu()">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
@@ -27,43 +27,46 @@
         </nav>
     </header>
     
-    <div class="formulario-signup">
-        <div class="c">
-            <h2>Registrar-se</h2>
-            <div id="msgError"></div>
-            <div id="msgSuccess"></div>
-
-            <form action="../scripts/singup-page.js" method="post">
-                <div class="label-float">
-                    <input type="text" id="userInput" name="userInput" required>
-                    <label id="userLabel" for="userInput">Usuário</label>
-                </div>
-                
-                <div class="label-float">
-                    <input type="email" id="email" name="email" required>
-                    <label id="emailLabel" for="email">Email</label>
-                </div>
-
-                <div class="label-float">
-                    <input type="password" id="senhaInput" name="senhaInput" required>
-                    <label id="senhaLabel" for="senhaInput">Senha</label>
-                    <i id="fa-eye" class="fa fa-eye" aria-hidden="true"></i>
-                </div>
-
-                <div class="label-float">
-                    <input type="password" id="confirmarSenha" name="confirmarSenha" required>
-                    <label id="confirmarSenhaLabel" for="confirmarSenha">Confirmar Senha</label>
-                    <i id="fa-eye" class="fa fa-eye" aria-hidden="true"></i>
-                </div>
-
-                <div class="justify-center">
-                    <button type="button" onclick="singup()">Registrar-se</button>
-                </div>
-
-                <p> Já tem conta? <a href="./login.html">Entre!</a> </p>
-            </form>
+    <div class="main-content">
+        <div class="formulario-signup">
+            <div class="c">
+                <h2>Registrar-se</h2>
+                <div id="msgError"></div>
+                <div id="msgSuccess"></div>
+    
+                <form action="../scripts/singup-page.js" method="post">
+                    <div class="label-float">
+                        <input type="text" id="userInput" name="userInput" required>
+                        <label id="userLabel" for="userInput">Usuário</label>
+                    </div>
+                    
+                    <div class="label-float">
+                        <input type="email" id="email" name="email" required>
+                        <label id="emailLabel" for="email">Email</label>
+                    </div>
+    
+                    <div class="label-float">
+                        <input type="password" id="senhaInput" name="senhaInput" required>
+                        <label id="senhaLabel" for="senhaInput">Senha</label>
+                        <i id="fa-eye" class="fa fa-eye" aria-hidden="true"></i>
+                    </div>
+    
+                    <div class="label-float">
+                        <input type="password" id="confirmarSenha" name="confirmarSenha" required>
+                        <label id="confirmarSenhaLabel" for="confirmarSenha">Confirmar Senha</label>
+                        <i id="fa-eye" class="fa fa-eye" aria-hidden="true"></i>
+                    </div>
+    
+                    <div class="justify-center">
+                        <button type="button" onclick="singup()">Registrar-se</button>
+                    </div>
+    
+                    <p> Já tem conta? <a href="./login.html">Entre!</a> </p>
+                </form>
+            </div>
         </div>
     </div>
+    
 
     <footer>
         <p>&copy; 2025 Gurizões Gamers Foda-se. Todos os direitos reservados nessa porra.</p>

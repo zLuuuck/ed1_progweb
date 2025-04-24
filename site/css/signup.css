@@ -23,6 +23,8 @@ nav {
     background: #23232e;
     height: 8vh;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1000;
 }
 
 .logo {
@@ -74,6 +76,19 @@ nav a {
     width: 100%;
 }
 
+.mobile-menu {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+}
+
 .formulario-signup {
     min-height: 93vh;
     margin: 0;
@@ -101,6 +116,7 @@ nav a {
     .c {
         width: 70%;
     }
+
 }
 
 @media (min-width: 1024px) {
@@ -115,6 +131,28 @@ nav a {
     }
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 100%;
+        background-color: #23232e;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+}
 h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -234,19 +272,21 @@ a {
     display: none;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #1a1a1a;
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     text-align: center;
-    padding: 1rem;
-    border-top: 2px solid #00f5ff;
-    color: #ffffff;
+    padding: 20px;
 }
 
-footer p{
-    color:#ffffff;
+footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 0.2rem 1rem 0.5rem 1rem;
+    border-top: 2px solid #00f5ff;
 }
 
 .social-icons a {
@@ -255,7 +295,12 @@ footer p{
     font-size: 1.2rem;
     transition: color 0.3s;
 }
- 
+
 .social-icons a:hover {
     color: #00f5ff;
+}
+
+footer p{
+    margin: 0.3rem 0;
+    color:#ffffff;
 }
