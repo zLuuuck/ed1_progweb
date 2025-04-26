@@ -112,6 +112,29 @@ footer p {
     color: #00f5ff;
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 100%;
+        background-color: #23232e;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+}
+
 .main-content {
     display: flex;
     flex-direction: column;
@@ -134,27 +157,4 @@ footer p {
     max-width: 600px;
     margin-bottom: 30px;
     color: #ccc;
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        position: absolute;
-        top: 8vh;
-        left: 0;
-        width: 100%;
-        background-color: #23232e;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 20px 0;
-        display: none;
-    }
-
-    .navbar.active {
-        display: flex;
-    }
-
-    .mobile-menu {
-        display: flex;
-    }
 }
