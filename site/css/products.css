@@ -107,7 +107,7 @@ nav a {
     }
 }
 /*Navbar*/
-/*Maincontent*/
+/*Main content*/
 .main-content {
     display: flex;
     flex-direction: column;
@@ -182,10 +182,9 @@ nav a {
 .product-card button:hover {
     box-shadow: 0 0 15px #00f5ff;
 }
+/*Main content*/
 
-
-/*Maincontent*/
-
+/*Footer*/
 footer {
     bottom: 0;
     width: 100%;
@@ -212,3 +211,4 @@ footer p {
 .social-icons a:hover {
     color: #00f5ff;
 }
+/*Footer*/
