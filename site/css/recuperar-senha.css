@@ -9,13 +9,10 @@
 
 body {
     background: linear-gradient(135deg, #1a1a2e, #0f0c29);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    justify-content: center;
-    align-items: center;
+    color: #fff;
 }
 
+/*NavBar*/
 nav {
     display: flex;
     justify-content: space-around;
@@ -110,8 +107,69 @@ nav a {
         display: flex;
     }
 }
+/*NavBar*/
+/*Footer*/
+footer {
+    bottom: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 1rem;
+    border-top: 2px solid #00f5ff;
+    color: #ffffff;
+}
 
-.formulario-login {
+footer p {
+    padding: 0;
+    padding-bottom: 1rem;
+    color: #ffffff;
+}
+
+.social-icons a {
+    margin: 0 0.5rem;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00f5ff;
+}
+/*Footer*/
+/*Success e Error*/
+#msgError {
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+    font-size: 14px;
+}
+
+#msgSuccess {
+    text-align: center;
+    color: green;
+    background-color: #7be67b;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+    font-size: 14px;
+}
+/*Success e Error*/
+
+/*Form*/
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.formulario {
     height: calc(100vh - 8vh);
     display: flex;
     justify-content: center;
@@ -130,7 +188,9 @@ nav a {
     box-shadow: 3px 3px 1px 0px #000000;
 }
 
+
 h2 {
+    color: #000000;
     text-align: center;
     margin-bottom: 20px;
     padding-top: 20px;
@@ -138,6 +198,7 @@ h2 {
     font-size: 26px;
 }
 
+/*Label*/
 .label-float {
     position: relative;
     padding-top: 13px;
@@ -161,16 +222,6 @@ h2 {
     border-radius: 0;
 }
 
-.label-float i {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    font-size: 20px;
-    color: #000000;
-}
-
 .label-float input:focus {
     border-bottom: 2px solid #1500ff;
 }
@@ -191,6 +242,7 @@ h2 {
     margin-top: 0;
     color: #1500ff;
 }
+/*Label*/
 
 button {
     display: flex;
@@ -229,108 +281,7 @@ a {
     transition: 0.3s ease-out;
 }
 
-.formulario-login a:hover {
+a:hover {
     color: #1500ff;
 }
-
-#msgError {
-    text-align: center;
-    color: #ff0000;
-    background-color: #ffbbbb;
-    padding: 10px;
-    border-radius: 4px;
-    display: none;
-    font-size: 14px;
-}
-
-#msgSuccess {
-    text-align: center;
-    color: green;
-    background-color: #7be67b;
-    padding: 10px;
-    border-radius: 4px;
-    display: none;
-    font-size: 14px;
-}
-
-.esqueci-senha {
-    justify-content: center;
-    display: flex;
-
-}
-
-@media (max-width: 768px) {
-    .c {
-        width: 100%;
-        border-radius: 12px;
-        padding: 20px 15px;
-    }
-
-    h2 {
-        font-size: 22px;
-        padding-top: 10px;
-        padding-bottom: 20px;
-    }
-
-    .label-float input {
-        font-size: 14px;
-    }
-
-    button {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    p {
-        font-size: 13pt;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        font-size: 18px;
-    }
-
-    .navbar li {
-        margin-left: 0;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    button {
-        font-size: 14px;
-    }
-
-    p {
-        font-size: 12pt;
-    }
-}
-
-footer {
-    bottom: 0;
-    width: 100%;
-    background-color: #1a1a1a;
-    text-align: center;
-    padding: 1rem;
-    border-top: 2px solid #00f5ff;
-    color: #ffffff;
-}
-
-footer p {
-    padding: 0;
-    padding-bottom: 1rem;
-    color: #ffffff;
-}
-
-.social-icons a {
-    margin: 0 0.5rem;
-    color: white;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: #00f5ff;
-}
+/*Form*/

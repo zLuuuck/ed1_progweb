@@ -13,6 +13,7 @@ function toggleMenu() {
     const navbar = document.querySelector('.navbar');
     navbar.classList.toggle('active');
 }
+
 // Função de login
 async function login() {
     const usernameInput = document.querySelector("#userInput").value.trim();
