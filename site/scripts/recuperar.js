@@ -3,61 +3,53 @@ function toggleMenu() {
     navbar.classList.toggle('active');
 }
 
-let msgError = document.querySelector("#msgError");
-let msgSuccess = document.querySelector("#msgSuccess");
+document.addEventListener("DOMContentLoaded", function() {
+    const formulario = document.getElementById("formulario");
+    const msgSuccess = document.getElementById("msgSuccess");
+    const msgError = document.getElementById("msgError");
 
-function showSuccess(message) {
-    const msgSuccess = document.querySelector("#msgSuccess");
-    msgSuccess.textContent = message;
-    msgSuccess.style.display = "block";
-    msgSuccess.style.color = "green";
-    document.querySelector("button[type='button']").disabled = true;
-}
+    formulario.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-function showError(message) {
-    const msgError = document.querySelector("#msgError");
-    msgError.textContent = message;
-    msgError.style.display = "block";
-    msgError.style.color = "red";
-}
+        const email = document.getElementById("email").value.trim();
+        const users = JSON.parse(localStorage.getItem("listaUsers") || "[]");
+        const user = users.find(u => u.email === email);
 
-function recuperar() {
+        if (!user) {
+            showError("E-mail não encontrado.");
+            return;
+        }
 
-document.getElementById("formulario").addEventListener("submit", function (e) {
-    e.preventDefault();
+        const token = Math.random().toString(36).substring(2);
+        localStorage.setItem(`recoveryToken-${token}`, email); // salva o token ligado ao email
 
-    const emailInput = document.getElementById("email");
-    const email = emailInput.value.trim();
-    const users = JSON.parse(localStorage.getItem("listaUsers") || "[]");
-    const user = users.find(u => u.email === email);
+        const recoveryLink = `${window.location.origin}/site/html/conta/redefinir-senha.html?token=${token}`;
 
-    const msg = document.getElementById("mensagem");
+        // Enviar e-mail via EmailJS
+        console.log("Enviando e-mail para:", email, "com link:", recoveryLink);
+        emailjs.send("service_4dii119", "template_h5b4xag", {
+            to_email: email,
+            recovery_link: recoveryLink
+        }).then(() => {
+            showSuccess("E-mail de recuperação enviado com sucesso! Verifique sua caixa de entrada e a pasta de spam.");
+            formulario.reset(); // Limpa o formulário após o envio
+        }).catch((error) => {
+            console.error("Erro ao enviar e-mail:", error);
+            showError("Erro ao enviar e-mail. Tente novamente mais tarde.");
+        });
+    });
 
-    if (!user) {
-        showError("E-mail não encontrado.");
-        msg.innerText = "E-mail não encontrado.";
-        msg.style.color = "red";
-        return;
+    function showSuccess(message) {
+        msgSuccess.textContent = message;
+        msgSuccess.style.display = "block";
+        msgSuccess.style.color = "green";
+        msgError.style.display = "none";
     }
 
-    const token = Math.random().toString(36).substring(2);
-    localStorage.setItem(`recoveryToken-${token}`, email); // salva o token ligado ao email
-
-    const recoveryLink = `${window.location.origin}/site/html/conta/redefinir.html?token=${token}`;
-
-    // Enviar e-mail via EmailJS
-    emailjs.send("service_uym7tgt", "template_x1fvfyr", {
-        to_email: email,
-        recovery_link: recoveryLink
-    }).then(() => {
-        msg.innerText = "E-mail de recuperação enviado com sucesso!";
-        msg.style.color = "green";
-        showSuccess("E-mail de recuperação enviado com sucesso!");
-    }).catch((error) => {
-        console.error("Erro ao enviar e-mail:", error);
-        msg.innerText = "Erro ao enviar e-mail. Tente novamente mais tarde.";
-        msg.style.color = "red";
-        showError("Erro ao enviar e-mail. Tente novamente mais tarde.");
-    });
+    function showError(message) {
+        msgError.textContent = message;
+        msgError.style.display = "block";
+        msgError.style.color = "red";
+        msgSuccess.style.display = "none";
+    }
 });
-}

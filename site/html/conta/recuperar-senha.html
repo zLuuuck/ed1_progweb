@@ -31,13 +31,13 @@
                 <h2>Recuperar Senha</h2>
                 <div id="msgSuccess" class="success-message"></div>
                 <div id="msgError" class="error-message"></div>
-                <form action="../scripts/recuperar.js" method="post">
+                <form id="formulario" method="post">
                     <div class="label-float">
-                        <input type="email" id="emailInput" name="emailInput" required>
-                        <label id="emailLabel" for="emailInput">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <label id="emailLabel" for="email">Email</label>
                     </div>
                     <div class="justify-center">
-                        <button type="button" onclick="recuperar()" type="submit">Enviar</button>
+                        <button type="submit">Enviar</button>
                     </div>
                     <p> Lembrou sua senha? Volte para a<a href="./login.html"> página de login!</a> </p>
                 </form>
@@ -53,8 +53,8 @@
         </div>
     </footer>
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>emailjs.init("uP-t5ujeAttQWs1aX");</script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>emailjs.init("awzOfUB0HNJqOCOLh");</script>
     <script src="../../scripts/recuperar.js"></script>
 </body>
 </html>
