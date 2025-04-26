@@ -1,9 +1,6 @@
 document.querySelectorAll(".fa-eye").forEach((btn) => {
     btn.addEventListener("click", () => {
-        // Identifica o input relacionado ao ícone clicado
         let inputPassword = btn.parentElement.querySelector("input");
-
-        // Alterna entre "password" e "text"
         if (inputPassword.type === "password") {
             inputPassword.type = "text";
             btn.classList.remove("fa-eye");
@@ -26,7 +23,7 @@ function showSuccess(message) {
     msgSuccess.textContent = message;
     msgSuccess.style.display = "block";
     msgSuccess.style.color = "green";
-    document.querySelector("button[type='button']").disabled = true;
+    document.querySelector("button[type='submit']").disabled = true; // Correção do seletor
 }
 
 function showError(message) {
@@ -36,36 +33,42 @@ function showError(message) {
     msgError.style.color = "red";
 }
 
-function redefinirsenha() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const token = urlParams.get("token");
-    const email = localStorage.getItem(`recoveryToken-${token}`);
+document.addEventListener("DOMContentLoaded", function() {
+    const formulario = document.getElementById("formularioRedefinir");
 
-    if (!token || !email) {
-        document.body.innerHTML = "<h2>Link inválido ou expirado.</h2>";
-    }
-
-    document.getElementById("formulario").addEventListener("submit", function (e) {
+    formulario.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const novaSenha = document.getElementById("nova-senha").value;
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get("token");
+        const email = localStorage.getItem(`recoveryToken-${token}`);
+        const novaSenha = document.getElementById("password").value; 
+        const confirmNovaSenha = document.getElementById("confirmPassword").value;
+
+        if (!token || !email) {
+            document.body.innerHTML = "<h2>Link inválido ou expirado.</h2>";
+            return;
+        }
+
+        if (novaSenha !== confirmNovaSenha) {
+            showError("As senhas não coincidem.");
+            return;
+        }
+
         let users = JSON.parse(localStorage.getItem("listaUsers") || "[]");
         const index = users.findIndex(u => u.email === email);
 
         if (index !== -1) {
-            users[index].senha = novaSenha;
+            users[index].senha = novaSenha; // **Importante: Em um sistema real, você HASHED a senha aqui!**
             localStorage.setItem("listaUsers", JSON.stringify(users));
             localStorage.removeItem(`recoveryToken-${token}`);
-            alert("Senha redefinida com sucesso!");
             showSuccess("Senha redefinida com sucesso!");
-            // Redireciona para a página de login após 5 segundos
             setTimeout(() => {
                 window.location.href = "/site/html/conta/login.html";
             }, 3000);
         } else {
             showError("Erro ao redefinir senha.");
             console.error("Erro ao redefinir senha.");
-            alert("Erro ao redefinir senha.");
         }
     });
-}
+});
