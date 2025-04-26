@@ -43,7 +43,7 @@ let msgSuccess = document.querySelector("#msgSuccess");
 user.addEventListener("keyup", () => {
     if (user.value.length <= 3) {
         userLabel.setAttribute('style', 'color: red')
-        userLabel.innerHTML = 'Nome *Insira no minimo 3 caracteres'
+        userLabel.innerHTML = 'Nome *Insira no mínimo 3 caracteres'
         user.setAttribute('style', 'border-color: red')
         validUser = false
     } else {
@@ -70,7 +70,7 @@ email.addEventListener("keyup", () => {
 senha.addEventListener("keyup", () => {
     if (senha.value.length <= 7) {
         senhaLabel.setAttribute('style', 'color: red')
-        senhaLabel.innerHTML = 'Senha *Insira no minimo 8 caracteres'
+        senhaLabel.innerHTML = 'Senha *Insira no mínimo 8 caracteres'
         senha.setAttribute('style', 'border-color: red')
         validSenha = false
     } else {
@@ -94,7 +94,7 @@ senhaConfirm.addEventListener("keyup", () => {
     }
 });
 
-function singup() {
+function signup() {
     if (validUser && validEmail && validSenha && validSenhaConfirm) {
         // Corrigido para usar o mesmo nome de chave ('listaUsers')
         let listaUsers = JSON.parse(localStorage.getItem('listaUsers') || '[]')

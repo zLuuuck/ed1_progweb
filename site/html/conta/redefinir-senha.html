@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recuperar senha</title>
-    <link rel="stylesheet" href="../../css/recuperar-senha.css">
+    <title>Redefinir Senha</title>
+    <link rel="stylesheet" href="../../css/redefinir-senha.css">
     <script src="https://kit.fontawesome.com/0dc50eaa4b.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -31,15 +31,20 @@
                 <h2>Recuperar Senha</h2>
                 <div id="msgSuccess" class="success-message"></div>
                 <div id="msgError" class="error-message"></div>
-                <form action="../scripts/recuperar.js" method="post">
+                <form action="../scripts/redefinir-senha.js" method="post">
                     <div class="label-float">
-                        <input type="email" id="emailInput" name="emailInput" required>
-                        <label id="emailLabel" for="emailInput">Email</label>
+                        <input type="password" id="passwordInput" name="passwordInput" required>
+                        <label id="passwordLabel" for="passwordInput">Nova Senha</label>
+                        <i id="fa-eye" class="fa fa-eye" aria-hidden="true"></i>
+                    </div>
+                    <div class="label-float">
+                        <input type="password" id="confirmPasswordInput" name="confirmPasswordInput" required>
+                        <label id="confirmPasswordLabel" for="confirmPasswordInput">Confirmar Nova Senha</label>
+                        <i id="fa-eye" class="fa fa-eye" aria-hidden="true"></i>
                     </div>
                     <div class="justify-center">
-                        <button type="button" onclick="recuperar()" type="submit">Enviar</button>
+                        <button type="button" onclick="redefinirsenha()" type="submit">Atualizar</button>
                     </div>
-                    <p> Lembrou sua senha? Volte para a<a href="./login.html"> página de login!</a> </p>
                 </form>
             </div>
         </div>
@@ -52,9 +57,6 @@
             <a href="#"><i class="fab fa-twitch"></i></a>
         </div>
     </footer>
-
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>emailjs.init("uP-t5ujeAttQWs1aX");</script>
-    <script src="../../scripts/recuperar.js"></script>
+    <script src="../../scripts/redefinir-senha.js"></script>
 </body>
 </html>
