@@ -86,11 +86,19 @@ nav a {
 }
 
 footer {
-    display: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: #1a1a1a;
     text-align: center;
     padding: 1rem;
     border-top: 2px solid #00f5ff;
+    color: #ffffff;
+}
+
+footer p {
+    padding: 0;
+    padding-bottom: 1rem;
+    color: #ffffff;
 }
 
 .social-icons a {

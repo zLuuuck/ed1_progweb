@@ -153,8 +153,8 @@ h2 {
     transition: all .3s ease-out;
 }
 
-.label-float input:focus + label,
-.label-float input:valid + label {
+.label-float input:focus+label,
+.label-float input:valid+label {
     font-size: 13px;
     margin-top: 0;
     color: #1500ff;
@@ -219,6 +219,12 @@ a {
     border-radius: 4px;
     display: none;
     font-size: 14px;
+}
+
+.esqueci-senha {
+    justify-content: center;
+    display: flex;
+
 }
 
 @media (max-width: 768px) {
@@ -289,7 +295,6 @@ a {
 }
 
 footer {
-    position: fixed;
     bottom: 0;
     width: 100%;
     background-color: #1a1a1a;
@@ -299,8 +304,10 @@ footer {
     color: #ffffff;
 }
 
-footer p{
-    color:#ffffff;
+footer p {
+    padding: 0;
+    padding-bottom: 1rem;
+    color: #ffffff;
 }
 
 .social-icons a {
@@ -309,7 +316,7 @@ footer p{
     font-size: 1.2rem;
     transition: color 0.3s;
 }
- 
+
 .social-icons a:hover {
     color: #00f5ff;
 }

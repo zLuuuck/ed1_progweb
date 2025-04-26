@@ -283,10 +283,19 @@ a {
 }
 
 footer {
+    bottom: 0;
+    width: 100%;
     background-color: #1a1a1a;
     text-align: center;
-    padding: 0.2rem 1rem 0.5rem 1rem;
+    padding: 1rem;
     border-top: 2px solid #00f5ff;
+    color: #ffffff;
+}
+
+footer p {
+    padding: 0;
+    padding-bottom: 1rem;
+    color: #ffffff;
 }
 
 .social-icons a {
@@ -298,9 +307,4 @@ footer {
 
 .social-icons a:hover {
     color: #00f5ff;
-}
-
-footer p{
-    margin: 0.3rem 0;
-    color:#ffffff;
 }
