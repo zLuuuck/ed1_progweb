@@ -90,7 +90,7 @@ nav a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 100vh;
     text-align: center;
     padding: 20px;
 }
@@ -191,6 +191,7 @@ footer p {
 .contato {
     text-align: center;
     background-color: #111;
+    height: 91vh;
 }
 
 .contato h2 {
