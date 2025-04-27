@@ -141,7 +141,7 @@ footer p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 91vh;
     text-align: center;
     padding: 20px;
 }
@@ -159,37 +159,6 @@ footer p {
     margin-bottom: 30px;
     color: #ccc;
 }
-
-.main-content {
-    display: flex;
-    justify-content: center;
-    padding: 50px 20px;
-}
-
-.sobre-container {
-    max-width: 1200px;
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-.main-content {
-    display: flex;
-    justify-content: center;
-    padding: 50px 20px;
-}
-
 
 .sobre-container {
     max-width: 1200px;
