@@ -176,21 +176,21 @@ footer p {
     flex-wrap: wrap;
 }
 
-/* Reset básico */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Layout principal */
+
 .main-content {
     display: flex;
     justify-content: center;
     padding: 50px 20px;
 }
 
-/* Container geral do conteúdo */
+
 .sobre-container {
     max-width: 1200px;
     width: 100%;
@@ -201,7 +201,7 @@ footer p {
     flex-wrap: wrap;
 }
 
-/* Mapa */
+/* google maps  */
 .mapa {
     flex: 1;
     min-width: 350px;
@@ -213,7 +213,7 @@ footer p {
     border-radius: 10px;
 }
 
-/* Texto */
+/* texto 1 título */
 .texto {
     flex: 1;
     min-width: 350px;
@@ -222,7 +222,7 @@ footer p {
     word-break: break-word;
 }
 
-/* Destaques */
+/* texto 2 principal */
 .texto h1 {
     font-size: 48px;
     color: #00f5ff;
@@ -283,7 +283,6 @@ footer .social-icons a:hover {
     color: #00f5ff;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .sobre-container {
         flex-direction: column;
