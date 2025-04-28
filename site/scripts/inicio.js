@@ -1,8 +1,3 @@
-function toggleMenu() {
-    const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('active');
-}
-
 document.getElementById('formulario').addEventListener('submit', function (e) {
     e.preventDefault(); // impede redirecionamento
 

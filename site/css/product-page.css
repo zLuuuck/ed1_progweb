@@ -136,14 +136,150 @@ footer p {
     color: #00f5ff;
 }
 /*Footer*/
+/*Success e Error*/
+
+#msgError {
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+    font-size: 14px;
+    width: 100%;
+}
+
+#msgSuccess {
+    text-align: center;
+    color: green;
+    background-color: #7be67b;
+    padding: 20px;
+    border-radius: 4px;
+    display: none;
+    font-size: 14px;
+    width: 100%;
+}
 
 /*Main-Content*/
 .main-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
-    text-align: center;
-    padding: 10px;
+    align-items: center;
+    min-height: calc(100vh - 8vh - 6vh); 
+    padding: 20px;
+}
+
+.product-detail-container {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    display: flex;
+    width: 100vh;
+    width: 95%;
+    padding: 30px;
+    color: #eee;
+}
+
+.product-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.product-name {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.product-price {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #00f5ff;
+}
+
+.product-description {
+    margin-bottom: 30px;
+}
+
+.product-description h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #00f5ff;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+.product-description p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.product-description ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.product-description li {
+    line-height: 1.6;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid #00f5ff;
+    padding: 0.6rem 1.5rem;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #00f5ff;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #00f5ff;
+    color: #16213e;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .product-detail-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .product-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .product-info {
+        align-items: center;
+        text-align: center;
+    }
+
+    .add-to-cart-btn {
+        align-self: center;
+    }
 }

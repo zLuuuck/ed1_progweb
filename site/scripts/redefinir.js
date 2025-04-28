@@ -13,11 +13,6 @@ document.querySelectorAll(".fa-eye").forEach((btn) => {
     });
 });
 
-function toggleMenu() {
-    const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('active');
-}
-
 function showSuccess(message) {
     const msgSuccess = document.querySelector("#msgSuccess");
     msgSuccess.textContent = message;

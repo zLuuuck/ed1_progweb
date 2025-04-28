@@ -10,6 +10,7 @@
 body {
     background: linear-gradient(135deg, #1a1a2e, #0f0c29);
     color: #fff;
+    overflow-x: hidden;
 }
 
 /*navbar*/
@@ -118,12 +119,11 @@ nav a {
     justify-content: center;
     height: 100vh;
     text-align: center;
-    padding: 10px;
+    padding: 50px;
 }
 
 .slideshow-container {
-    width: 100%; /* Largura fixa para o container do slideshow */
-    max-width: 1500px; /* Largura máxima para o container do slideshow */
+    width: 100%;
     height: 90vh; 
     overflow: hidden;
     display: flex;
@@ -152,8 +152,8 @@ nav a {
 }
 
 .product-image-container {
-    width: 40%; /* Largura fixa para a imagem */
-    height: 80%; /* Altura fixa para a imagem */
+    width: 40%;
+    height: 80%; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -162,14 +162,14 @@ nav a {
 .product-image {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain; /* Garante que a imagem caiba dentro do container sem cortar */
+    object-fit: contain; 
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .product-info {
-    width: 60%; /* Largura fixa para as informações do produto */
-    height: 80%; /* Altura fixa para as informações do produto */
+    width: 60%;
+    height: 80%; 
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -198,8 +198,8 @@ nav a {
     line-height: 1.4;
 }
 
-.buy-btn {
-    width: 60vh;
+.view-btn {
+    width: 90%;
     background-color: transparent;
     border: 2px solid #00f5ff;
     padding: 0.6rem 1.5rem;
@@ -208,10 +208,10 @@ nav a {
     cursor: pointer;
     transition: all 0.3s;
     border-radius: 5px;
-    align-self: flex-start; /* Alinha o botão à esquerda dentro do info container */
+    align-self: flex-start; 
 }
 
-.buy-btn:hover {
+.view-btn:hover {
     background-color: #00f5ff;
     color: #16213e;
 }
@@ -249,6 +249,38 @@ nav a {
     right: 10px;
 }
 
+@media (max-width: 768px) {
+    .slideshow-container {
+        flex-direction: column; /* Empilha em telas menores */
+        align-items: center;
+    }
+
+    .product-slide {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 95%;
+        max-width: none;
+    }
+
+    .product-image {
+        max-width: 90%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .product-info {
+        width: 95%;
+        text-align: center;
+    }
+
+    .view-btn {
+        align-self: center;
+        width: 80%;
+    }
+}
+
+
 /* Fade animation */
 @keyframes fade {
     from {
@@ -259,8 +291,6 @@ nav a {
         opacity: 1
     }
 }
-
-
 /*Main content*/
 
 /*Footer*/

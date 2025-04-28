@@ -1,8 +1,3 @@
-function toggleMenu() {
-    const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('active');
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.product-slide');
     const prevBtn = document.querySelector('.prev');

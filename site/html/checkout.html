@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
+    <link rel="stylesheet" href="/site/css/checkout.css">
+    <script src="https://kit.fontawesome.com/0dc50eaa4b.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
+    <header class="cabeçalho">
+        <nav>
+            <a class="logo" href="/site/html/index.html">Gurizões Gamers</a>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="navbar">
+                <li><a href="/site/html/index.html">Home</a></li>
+                <li><a href="/site/html/products.html">Produtos</a></li>
+                <li><a href="/site/html/index.html#contato">Contato</a></li>
+                <li><a href="/site/html/conta/conta.html">Conta</a></li>
+                <li><a href="/site/html/sobre.html">Sobre</a></li>
+                <li><a href="/site/html/checkout.html"><i class="fas fa-shopping-cart"></i><span
+                            class="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="cart-container">
+            <h1>Seu Carrinho</h1>
+            <div class="cart-items">
+                <div class="cart-item">
+                </div>
+            </div>
+            <div class="cart-summary">
+                <p class="subtotal">Subtotal: R$ 00,00</p>
+                <p class="shipping">Frete: A calcular</p>
+                <h2 class="total">Total: R$ 00,00</h2>
+                <button class="checkout-btn">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Gurizões Gamers. Todos os direitos reservados.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/z_luuuck/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@zLuuck" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/5541999016605" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/lucastoterol/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/zLuuuck" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+    <script src="/site/scripts/navbar.js"></script>
+    <script src="/site/scripts/checkout.js"></script>
+
 </body>
+
 </html>

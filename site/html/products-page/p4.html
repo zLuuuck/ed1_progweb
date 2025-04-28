@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="cabeçalho">
         <nav>
             <a class="logo" href="/site/html/index.html">Gurizões Gamers</a>
             <div class="mobile-menu" onclick="toggleMenu()">
@@ -24,23 +24,53 @@
                 <li><a href="/site/html/index.html#contato">Contato</a></li>
                 <li><a href="/site/html/conta/conta.html">Conta</a></li>
                 <li><a href="/site/html/sobre.html">Sobre</a></li>
+                <li><a href="/site/html/checkout.html"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a></li>
             </ul>
         </nav>
     </header>
 
     <div class="main-content">
-
+        <div class="product-detail-container">
+            <div class="product-image">
+                <img src="/site/html/img/4.png" alt="PC Gamer">
+            </div>
+            <div class="product-info" id="4">
+                <h1 class="product-name">PC Gamer Nível 4</h1>
+                <p class="product-price">R$ 1799,99</p>
+                <div class="product-description">
+                    <h2>Descrição Detalhada</h2>
+                    <p>Este é o PC Gamer Nível 2, perfeito para iniciantes e jogadores casuais. Equipado com um
+                        processador AMD Ryzen 3 e uma placa de vídeo NVIDIA GeForce GTX 1650, oferece uma ótima
+                        experiência em jogos populares com configurações médias.</p>
+                    <p><strong>Especificações:</strong></p>
+                    <ul>
+                        <li><strong>Processador:</strong> AMD Ryzen 3 3200G</li>
+                        <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GTX 1650 4GB</li>
+                        <li><strong>Memória RAM:</strong> 8GB DDR4 3200MHz</li>
+                        <li><strong>Armazenamento:</strong> SSD 240GB</li>
+                        <li><strong>Fonte:</strong> 500W Certificada</li>
+                        <li><strong>Gabinete:</strong> Gamer com iluminação RGB</li>
+                    </ul>
+                    <p>Ideal para quem busca um bom custo-benefício para começar no mundo dos jogos no PC.</p>
+                </div>
+                <button type="button" class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                <div id="msgSuccess" class="success-message"></div>
+                <div id="msgError" class="error-message"></div>
+            </div>
+        </div>
     </div>
 
     <footer>
-        <p>&copy; 2025 Gurizões Gamers Foda-se. Todos os direitos reservados nessa porra.</p>
+        <p>&copy; 2025 Gurizões Gamers. Todos os direitos reservados.</p>
         <div class="social-icons">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-twitch"></i></a>
+            <a href="https://www.instagram.com/z_luuuck/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@zLuuck" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/5541999016605" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/lucastoterol/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/zLuuuck" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </footer>
-
+    <script src="/site/scripts/navbar.js"></script>
     <script src="/site/scripts/product-page.js"></script>
 
 </body>

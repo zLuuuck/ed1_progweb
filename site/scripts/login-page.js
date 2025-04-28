@@ -1,4 +1,4 @@
-document.querySelector(".fa-eye").addEventListener("click", function() {
+document.querySelector(".fa-eye").addEventListener("click", function () {
     let inputPassword = document.getElementById("senhaInput");
     if (inputPassword.type === "password") {
         inputPassword.type = "text";
@@ -8,12 +8,6 @@ document.querySelector(".fa-eye").addEventListener("click", function() {
         this.classList.replace("fa-eye-slash", "fa-eye");
     }
 });
-
-function toggleMenu() {
-    const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('active');
-}
-
 // Função de login
 async function login() {
     const usernameInput = document.querySelector("#userInput").value.trim();
@@ -27,7 +21,7 @@ async function login() {
 
     try {
         const listaUsers = JSON.parse(localStorage.getItem("listaUsers") || "[]");
-        
+
         const usuarioEncontrado = listaUsers.find(user => user.nome === usernameInput);
 
         if (!usuarioEncontrado) {
@@ -72,7 +66,7 @@ function showError(message) {
     msgError.textContent = message;
     msgError.style.display = "block";
     msgError.style.color = "red";
-    
+
     let userInput = document.querySelector("#userInput");
     let senhaInput = document.querySelector("#senhaInput");
     let userLabel = document.querySelector("#userLabel");
