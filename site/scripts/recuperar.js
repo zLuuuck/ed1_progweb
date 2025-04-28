@@ -1,9 +1,4 @@
-function toggleMenu() {
-    const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('active');
-}
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const formulario = document.getElementById("formularioRecuperar");
     const msgSuccess = document.getElementById("msgSuccess");
     const msgError = document.getElementById("msgError");
@@ -33,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }).then(() => {
             showSuccess("E-mail de recuperação enviado com sucesso! Verifique sua caixa de entrada e a pasta de spam.");
             formulario.reset(); // Limpa o formulário após o envio
-            setTimeout(()=>{
+            setTimeout(() => {
                 window.location.href = '/site/html/conta/login.html'
             }, 3000)
         }).catch((error) => {

@@ -16,11 +16,6 @@ document.querySelectorAll(".fa-eye").forEach((btn) => {
     });
 });
 
-function toggleMenu() {
-    const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('active');
-}
-
 let user = document.querySelector("#userInput");
 let userLabel = document.querySelector("#userLabel");
 let validUser = false;
@@ -125,8 +120,8 @@ function signup() {
         showSuccess('Cadastro realizado com sucesso! Você será redirecionado para a tela de login!')
         msgError.setAttribute('style', 'display: none')
         msgError.innerHTML = ''
-        
-        setTimeout(()=>{
+
+        setTimeout(() => {
             window.location.href = '/site/html/conta/login.html'
         }, 3000)
     } else {

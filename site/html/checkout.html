@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conta</title>
-    <link rel="stylesheet" href="../../css/conta.css">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/site/css/checkout.css">
     <script src="https://kit.fontawesome.com/0dc50eaa4b.js" crossorigin="anonymous"></script>
 </head>
 
@@ -24,22 +24,28 @@
                 <li><a href="/site/html/index.html#contato">Contato</a></li>
                 <li><a href="/site/html/conta/conta.html">Conta</a></li>
                 <li><a href="/site/html/sobre.html">Sobre</a></li>
-                <li><a href="/site/html/checkout.html"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a></li>
+                <li><a href="/site/html/checkout.html"><i class="fas fa-shopping-cart"></i><span
+                            class="cart-count">0</span></a></li>
             </ul>
         </nav>
     </header>
-    <div class="main-content">
-        <div class="container">
-            <h1>Minha Conta</h1>
-            <h2 id="user_logado_nome">Olá, [Nome do Usuário]</h2>
 
-            <div class="account-options">
-                <button onclick="verPedidos()">📦 Meus Pedidos</button>
-                <button onclick="editarPerfil()">⚙️ Editar Perfil</button>
-                <button onclick="logout()">🚪 Sair</button>
+    <div class="main-content">
+        <div class="cart-container">
+            <h1>Seu Carrinho</h1>
+            <div class="cart-items">
+                <div class="cart-item">
+                </div>
+            </div>
+            <div class="cart-summary">
+                <p class="subtotal">Subtotal: R$ 00,00</p>
+                <p class="shipping">Frete: A calcular</p>
+                <h2 class="total">Total: R$ 00,00</h2>
+                <button class="checkout-btn">Finalizar Compra</button>
             </div>
         </div>
     </div>
+
     <footer>
         <p>&copy; 2025 Gurizões Gamers. Todos os direitos reservados.</p>
         <div class="social-icons">
@@ -51,7 +57,8 @@
         </div>
     </footer>
     <script src="/site/scripts/navbar.js"></script>
-    <script src="../../scripts/conta.js"></script>
+    <script src="/site/scripts/checkout.js"></script>
+
 </body>
 
 </html>

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar-se</title>
-    <link rel="stylesheet" href="../../css/signup.css">
+    <title>PC3</title>
+    <link rel="stylesheet" href="/site/css/product-page.css">
     <script src="https://kit.fontawesome.com/0dc50eaa4b.js" crossorigin="anonymous"></script>
-
 </head>
+
 <body>
     <header class="cabeçalho">
         <nav>
@@ -27,47 +28,37 @@
             </ul>
         </nav>
     </header>
-    
+
     <div class="main-content">
-        <div class="formulario-signup">
-            <div class="c">
-                <h2>Registrar-se</h2>
-                <div id="msgError"></div>
-                <div id="msgSuccess"></div>
-    
-                <form action="../scripts/signup-page.js" method="post">
-                    <div class="label-float">
-                        <input type="text" id="userInput" name="userInput" required>
-                        <label id="userLabel" for="userInput">Usuário</label>
-                    </div>
-                    
-                    <div class="label-float">
-                        <input type="email" id="email" name="email" required>
-                        <label id="emailLabel" for="email">Email</label>
-                    </div>
-    
-                    <div class="label-float">
-                        <input type="password" id="senhaInput" name="senhaInput" required>
-                        <label id="senhaLabel" for="senhaInput">Senha</label>
-                        <i id="fa-eye" class="fa fa-eye" aria-hidden="true"></i>
-                    </div>
-    
-                    <div class="label-float">
-                        <input type="password" id="confirmarSenha" name="confirmarSenha" required>
-                        <label id="confirmarSenhaLabel" for="confirmarSenha">Confirmar Senha</label>
-                        <i id="fa-eye" class="fa fa-eye" aria-hidden="true"></i>
-                    </div>
-    
-                    <div class="justify-center">
-                        <button type="button" onclick="signup()">Registrar-se</button>
-                    </div>
-    
-                    <p> Já tem conta? <a href="./login.html">Entre!</a> </p>
-                </form>
+        <div class="product-detail-container">
+            <div class="product-image">
+                <img src="/site/html/img/3.png" alt="PC Gamer">
+            </div>
+            <div class="product-info" id="3">
+                <h1 class="product-name">PC Gamer Nível 3</h1>
+                <p class="product-price">R$ 1799,99</p>
+                <div class="product-description">
+                    <h2>Descrição Detalhada</h2>
+                    <p>Este é o PC Gamer Nível 2, perfeito para iniciantes e jogadores casuais. Equipado com um
+                        processador AMD Ryzen 3 e uma placa de vídeo NVIDIA GeForce GTX 1650, oferece uma ótima
+                        experiência em jogos populares com configurações médias.</p>
+                    <p><strong>Especificações:</strong></p>
+                    <ul>
+                        <li><strong>Processador:</strong> AMD Ryzen 3 3200G</li>
+                        <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce GTX 1650 4GB</li>
+                        <li><strong>Memória RAM:</strong> 8GB DDR4 3200MHz</li>
+                        <li><strong>Armazenamento:</strong> SSD 240GB</li>
+                        <li><strong>Fonte:</strong> 500W Certificada</li>
+                        <li><strong>Gabinete:</strong> Gamer com iluminação RGB</li>
+                    </ul>
+                    <p>Ideal para quem busca um bom custo-benefício para começar no mundo dos jogos no PC.</p>
+                </div>
+                <button type="button" class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                <div id="msgSuccess" class="success-message"></div>
+                <div id="msgError" class="error-message"></div>
             </div>
         </div>
     </div>
-    
 
     <footer>
         <p>&copy; 2025 Gurizões Gamers. Todos os direitos reservados.</p>
@@ -79,7 +70,8 @@
             <a href="https://github.com/zLuuuck" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </footer>
+    <script src="/site/scripts/product-page.js"></script>
     <script src="/site/scripts/navbar.js"></script>
-    <script src="../../scripts/signup-page.js"></script>
 </body>
+
 </html>
