@@ -9,8 +9,9 @@
 
 body {
     background: linear-gradient(135deg, #1a1a2e, #0f0c29);
-    color: #000;
+    color: #fff;
 }
+
 /*navbar*/
 nav {
     display: flex;
@@ -84,6 +85,7 @@ nav a {
     background: #fff;
     margin: 8px;
 }
+
 @media (max-width: 768px) {
     .navbar {
         position: absolute;
@@ -106,6 +108,7 @@ nav a {
         display: flex;
     }
 }
+
 /*Navbar*/
 /*Main content*/
 .main-content {
@@ -115,73 +118,149 @@ nav a {
     justify-content: center;
     height: 100vh;
     text-align: center;
+    padding: 10px;
+}
+
+.slideshow-container {
+    width: 100%; /* Largura fixa para o container do slideshow */
+    max-width: 1500px; /* Largura máxima para o container do slideshow */
+    height: 90vh; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    background-color: #1e1e1e;
+}
+
+.product-slide {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    color: white;
+    animation: fade 0.5s ease-in-out;
+    height: 100%; 
+    width: 100%; 
     padding: 20px;
 }
 
-.products {
-    padding: 60px 50px;
-    padding-bottom: 2.5rem;
+.product-slide.active {
+    display: flex;
+}
+
+.product-image-container {
+    width: 40%; /* Largura fixa para a imagem */
+    height: 80%; /* Altura fixa para a imagem */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Garante que a imagem caiba dentro do container sem cortar */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.product-info {
+    width: 60%; /* Largura fixa para as informações do produto */
+    height: 80%; /* Altura fixa para as informações do produto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: justify;
+    padding-left: 2rem;
+    overflow-y: auto; 
+}
+
+.product-info h1 {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #00f5ff;
+}
+
+.description {
+    max-width: 90%;
+    margin: 0 0 1.5rem 0;
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+.buy-btn {
+    width: 60vh;
+    background-color: transparent;
+    border: 2px solid #00f5ff;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    color: #00f5ff;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 5px;
+    align-self: flex-start; /* Alinha o botão à esquerda dentro do info container */
+}
+
+.buy-btn:hover {
+    background-color: #00f5ff;
+    color: #16213e;
+}
+
+/* Botões Prev e Next */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    user-select: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    line-height: 40px;
     text-align: center;
 }
 
-.products h1 {
-    font-size: 36px;
-    margin-bottom: 40px;
-    color: #00f5ff;
-    text-shadow: 0 0 10px #00f5ff;
+.prev:hover,
+.next:hover {
+    background: rgba(255, 255, 255, 0.3);
 }
 
-.products-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+.prev {
+    left: 10px;
 }
 
-.product-card {
-    background-color: #1f1f2f;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px #00f5ff33;
-    transition: 0.3s;
+.next {
+    right: 10px;
 }
 
-.product-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #00f5ff88;
+/* Fade animation */
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
-.product-card img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 15px;
-}
 
-.product-card h2 {
-    font-size: 20px;
-    color: #00f5ff;
-    margin-bottom: 10px;
-}
-
-.product-card p {
-    font-size: 14px;
-    color: #ccc;
-    margin-bottom: 15px;
-}
-
-.product-card button {
-    background-color: #00f5ff;
-    color: #000;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.product-card button:hover {
-    box-shadow: 0 0 15px #00f5ff;
-}
 /*Main content*/
 
 /*Footer*/
@@ -211,4 +290,5 @@ footer p {
 .social-icons a:hover {
     color: #00f5ff;
 }
+
 /*Footer*/
