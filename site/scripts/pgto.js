@@ -85,11 +85,6 @@ const cardPatterns = {
     visa: /^4/,
     mastercard: /^5[1-5]/,
     amex: /^3[47]/,
-    elo: /^636/,
-    hipercard: /^606282|^3841/,
-    diners: /^36/,
-    discover: /^6(?:011|5)/,
-    jcb: /^(?:2131|1800|35)/
 };
 
 function detectCardBrand(number) {
