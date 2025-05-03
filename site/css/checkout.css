@@ -310,30 +310,15 @@ footer p {
         text-align: left;
     }
 }
-/* Estilos do Footer (podem ser semelhantes ao seu arquivo principal) */
-footer {
-    bottom: 0;
-    width: 100%;
-    background-color: #1a1a1a;
+
+#avisoLogin {
+    display: none;
+    color: #ff0000;
+    background-color: #ffbbbb;
     text-align: center;
-    padding: 1rem;
-    border-top: 2px solid #00f5ff;
-    color: #ffffff;
-}
-
-footer p {
-    padding: 0;
-    padding-bottom: 1rem;
-    color: #ffffff;
-}
-
-.social-icons a {
-    margin: 0 0.5rem;
-    color: white;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: #00f5ff;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
 }

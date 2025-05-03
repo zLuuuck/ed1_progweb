@@ -2,9 +2,12 @@ function carregarCarrinho() {
     const carrinhoString = localStorage.getItem('carrinho');
     const carrinho = carrinhoString ? JSON.parse(carrinhoString) : [];
     const listaCarrinho = document.querySelector('.cart-items'); 
+    const sumary = document.querySelector('.cart-summary');
+    const botao = document.querySelector('.checkout-btn');
 
     if (carrinho.length === 0) {
-        listaCarrinho.innerHTML = '<p>Seu carrinho está vazio.</p>';
+        listaCarrinho.innerHTML = '<p style="text-align:center;padding:10vh">Seu carrinho está vazio.</p>';
+        sumary.innerHTML = '<p></p>';
         return;
     }
 
@@ -32,6 +35,22 @@ function carregarCarrinho() {
 
         listaCarrinho.appendChild(itemCarrinho);
     });
+
+    if (botao) {
+        botao.addEventListener('click', function () {
+            const token = localStorage.getItem("token")
+            if (token) {
+                window.location.href = "/site/html/pgto.html"
+            }
+            if (token == null) {
+                console.log("redirecionando para página de login. . . ")
+                avisoLogin("Você precisa estar logado! Redirecionando . . .")
+                setTimeout(() => {
+                    window.location.href = "/site/html/conta/login.html"
+                }, 3000);
+            }
+        })
+    }
 
     adicionarListenersRemover();
     atualizarTotalCarrinho(); 
@@ -80,3 +99,10 @@ function atualizarTotalCarrinho() {
 }
 
 window.onload = carregarCarrinho;
+
+function avisoLogin(message) {
+    const msgError = document.querySelector("#avisoLogin");
+    msgError.textContent = message;
+    msgError.style.display = "block";
+    msgError.style.color = "red";
+}
