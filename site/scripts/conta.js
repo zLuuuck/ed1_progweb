@@ -17,10 +17,3 @@ function logout() {
     alert('Você saiu da sua conta!');
     window.location.href = "/site/html/conta/login.html";
 }
-
-const mobileMenu = document.querySelector('.mobile-menu');
-const navbar = document.querySelector('.navbar');
-
-mobileMenu.addEventListener('click', () => {
-    navbar.classList.toggle('active');
-});
