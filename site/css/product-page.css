@@ -87,6 +87,36 @@ nav a {
     margin: 6px;
 }
 
+@media (max-width: 1010px) {
+    .navbar {
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 100%;
+        background-color: #23232e;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+    
+    .logo {
+        font-size: 18px;
+    }
+
+    .navbar li {
+        font-size: 14px;
+    }
+}
 /*Footer*/
 footer {
     background-color: #1a1a1a;
@@ -112,7 +142,8 @@ footer p {
 }
 
 /*Mensagens*/
-#msgError, #msgSuccess {
+#msgError,
+#msgSuccess {
     text-align: center;
     padding: 15px;
     border-radius: 4px;
@@ -213,18 +244,21 @@ footer p {
     width: 100%;
     background-color: transparent;
     border: 2px solid #00f5ff;
-    padding: 0.6rem 1.5rem;
-    font-size: 1rem;
     color: #00f5ff;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s;
+    transition: all .4s ease-out;
 }
 
 .add-to-cart-btn:hover {
+    color: #000000;
     background-color: #00f5ff;
-    color: #16213e;
-    transform: scale(1.03);
+    box-shadow: 0 0 20px #00f5ff;
+    transform: scale(1.05);
 }
 
 /* RESPONSIVO */
@@ -243,31 +277,6 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    nav {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .navbar {
-        position: absolute;
-        top: 8vh;
-        left: 0;
-        width: 100%;
-        background-color: #23232e;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
-        display: none;
-    }
-
-    .navbar.active {
-        display: flex;
-    }
-
-    .mobile-menu {
-        display: flex;
-    }
-
     .product-detail-container {
         flex-direction: column;
         align-items: center;
@@ -286,14 +295,6 @@ footer p {
 }
 
 @media (max-width: 480px) {
-    .logo {
-        font-size: 18px;
-    }
-
-    .navbar li {
-        font-size: 14px;
-    }
-
     .product-name {
         font-size: 1.5rem;
     }
