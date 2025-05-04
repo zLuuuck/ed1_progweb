@@ -16,6 +16,11 @@ document.querySelectorAll(".fa-eye").forEach((btn) => {
     });
 });
 
+if (localStorage.getItem("token")) {
+    alert('Você já está logado!');
+    window.location.href = "/site/html/index.html";
+}
+
 let user = document.querySelector("#userInput");
 let userLabel = document.querySelector("#userLabel");
 let validUser = false;

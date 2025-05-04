@@ -87,7 +87,7 @@ nav a {
     margin: 8px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1010px) {
     .navbar {
         position: absolute;
         top: 8vh;
@@ -249,8 +249,14 @@ nav a {
     right: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1500px) {
+    .main-content {
+        height: auto; /* Ajusta a altura para telas menores */
+        padding: 20px;
+    }
+
     .slideshow-container {
+        height: auto;
         flex-direction: column; /* Empilha em telas menores */
         align-items: center;
     }
@@ -272,6 +278,7 @@ nav a {
     .product-info {
         width: 95%;
         text-align: center;
+        overflow: visible;
     }
 
     .view-btn {

@@ -301,35 +301,6 @@ footer p {
     flex-direction: column;
 }
 
-/* CARTÃO DE CRÉDITO */
-.card-number-wrapper {
-    position: relative;
-    width: 100%;
-}
-
-.card-number-wrapper input {
-    width: 100%;
-    padding: 10px 45px 10px 10px;
-    border-radius: 5px;
-    background-color: #111;
-    color: white;
-    border: 1px solid #00f5ff;
-    font-size: 1rem;
-    outline: none;
-}
-
-.card-icon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 35px;
-    height: 22px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 /* MEDIA QUERIES */
 @media (max-width: 1024px) {
     .container-contato {
@@ -339,6 +310,7 @@ footer p {
 
     .formulario-contato,
     .texto-contato {
+        width: 115vh;
         max-width: 100%;
     }
 

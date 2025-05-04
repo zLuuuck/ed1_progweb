@@ -8,6 +8,12 @@ document.querySelector(".fa-eye").addEventListener("click", function () {
         this.classList.replace("fa-eye-slash", "fa-eye");
     }
 });
+
+if (localStorage.getItem("token")) {
+    alert('Você já está logado!');
+    window.location.href = "/site/html/index.html";
+}
+
 // Função de login
 async function login() {
     const usernameInput = document.querySelector("#userInput").value.trim();
