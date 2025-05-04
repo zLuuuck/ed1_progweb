@@ -22,6 +22,7 @@ nav {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 1000;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -40,6 +41,7 @@ nav {
 .navbar {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .navbar li {
@@ -86,6 +88,7 @@ nav a {
     margin: 8px;
 }
 
+/* Responsividade Navbar */
 @media (max-width: 768px) {
     .navbar {
         position: absolute;
@@ -121,9 +124,7 @@ footer {
 }
 
 footer p {
-    padding: 0;
     padding-bottom: 1rem;
-    color: #ffffff;
 }
 
 .social-icons a {
@@ -137,42 +138,40 @@ footer p {
     color: #00f5ff;
 }
 
-#msgError {
+#msgError, #msgSuccess {
     text-align: center;
-    color: #ff0000;
-    background-color: #ffbbbb;
     padding: 10px;
     border-radius: 4px;
     display: none;
     font-size: 14px;
+}
+
+#msgError {
+    color: #ff0000;
+    background-color: #ffbbbb;
 }
 
 #msgSuccess {
-    text-align: center;
     color: green;
     background-color: #7be67b;
-    padding: 10px;
     padding-bottom: 15px;
-    border-radius: 4px;
-    display: none;
-    font-size: 14px;
 }
-/*Main content*/
 
+/*Main content*/
 .main-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 110vh;
+    min-height: 100vh;
     text-align: center;
     padding: 20px;
 }
 
 .form-container {
     background-color: #1c1c2e;
-    width: 50;
-    height: auto;
+    width: 100%;
+    max-width: 500px;
     padding: 30px 25px;
     border-radius: 4%;
     box-shadow: 0 0 20px #00f5ff44;
@@ -202,15 +201,11 @@ footer p {
     background-color: #111;
     color: #FFFFFF;
     border: 1px solid #00f5ff;
-    ;
     border-radius: 5px;
     font-size: 16px;
 }
 
 button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     background-color: transparent;
     border: 2px solid #00f5ff;
@@ -239,7 +234,6 @@ button:hover {
 .card-number-wrapper input {
     width: 100%;
     padding: 10px 45px 10px 10px;
-    /* espaço à direita para o ícone */
     border-radius: 5px;
     background-color: #111;
     color: white;
@@ -258,4 +252,26 @@ button:hover {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+/* Responsividade adicional */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 20px 15px;
+    }
+
+    .logo {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .navbar li {
+        margin-left: 0;
+    }
 }

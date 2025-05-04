@@ -12,6 +12,7 @@ body {
     color: #fff;
 }
 
+/* HEADER */
 nav {
     display: flex;
     justify-content: space-around;
@@ -85,12 +86,13 @@ nav a {
     margin: 8px;
 }
 
+/* LANDING PAGE */
 .landing-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
     padding: 20px;
 }
@@ -125,6 +127,7 @@ nav a {
     transform: scale(1.05);
 }
 
+/* FOOTER */
 footer {
     bottom: 0;
     width: 100%;
@@ -152,52 +155,18 @@ footer p {
     color: #00f5ff;
 }
 
-@media (max-width: 768px) {
-    .navbar {
-        position: absolute;
-        top: 8vh;
-        left: 0;
-        width: 100%;
-        background-color: #23232e;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 20px 0;
-        display: none;
-    }
-
-    .navbar.active {
-        display: flex;
-    }
-
-    .mobile-menu {
-        display: flex;
-    }
-
-    .landing-page h1 {
-        font-size: 32px;
-    }
-
-    .landing-page p {
-        font-size: 16px;
-    }
-
-    .cta-button {
-        font-size: 16px;
-        padding: 12px 24px;
-    }
-}
-
+/* CONTATO */
 .contato {
     text-align: center;
     background-color: #111;
-    height: 91vh;
+    min-height: 91vh;
+    padding: 40px 20px;
 }
 
 .contato h2 {
     font-size: 32px;
     margin-bottom: 20px;
-    padding: 50px;
+    padding: 50px 10px;
     color: #00f5ff;
 }
 
@@ -280,7 +249,6 @@ footer p {
     transform: scale(1.05);
 }
 
-
 .nome-sobrenome {
     display: flex;
     gap: 20px;
@@ -291,17 +259,7 @@ footer p {
     flex: 1;
 }
 
-@media (max-width: 768px) {
-    .container-contato {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .formulario-contato,
-    .texto-contato {
-        max-width: 100%;
-    }
-}
+/* MENSAGENS */
 #msgError {
     text-align: center;
     color: #ff0000;
@@ -316,9 +274,158 @@ footer p {
     text-align: center;
     color: green;
     background-color: #7be67b;
-    padding: 10px;
-    padding-bottom: 15px;
+    padding: 10px 10px 15px;
     border-radius: 4px;
     display: none;
     font-size: 14px;
+}
+
+/* FORMULÁRIO GERAL */
+.form-container {
+    background-color: #1c1c2e;
+    width: 50%;
+    height: auto;
+    padding: 30px 25px;
+    border-radius: 4%;
+    box-shadow: 0 0 20px #00f5ff44;
+    margin: 0 auto;
+}
+
+.form-container h1 {
+    padding: 20px;
+    text-align: center;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* CARTÃO DE CRÉDITO */
+.card-number-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.card-number-wrapper input {
+    width: 100%;
+    padding: 10px 45px 10px 10px;
+    border-radius: 5px;
+    background-color: #111;
+    color: white;
+    border: 1px solid #00f5ff;
+    font-size: 1rem;
+    outline: none;
+}
+
+.card-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 22px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+    .container-contato {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .formulario-contato,
+    .texto-contato {
+        max-width: 100%;
+    }
+
+    .landing-page h1 {
+        font-size: 36px;
+    }
+
+    .landing-page p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 100%;
+        background-color: #23232e;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+
+    .landing-page h1 {
+        font-size: 32px;
+    }
+
+    .landing-page p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .nome-sobrenome {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .landing-page h1 {
+        font-size: 24px;
+    }
+
+    .landing-page p {
+        font-size: 14px;
+    }
+
+    .cta-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .navbar li {
+        margin-left: 16px;
+        font-size: 14px;
+    }
+
+    .formulario-contato h2,
+    .contato h2 {
+        font-size: 22px;
+        padding: 20px;
+    }
+
+    .form-container {
+        padding: 20px 15px;
+    }
 }

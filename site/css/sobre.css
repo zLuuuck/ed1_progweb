@@ -8,24 +8,25 @@
 }
 
 body {
-
     background: linear-gradient(135deg, #1a1a2e, #0f0c29);
     color: #fff;
 }
 
+/* NAVBAR */
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background: #23232e;
     height: 8vh;
+    padding: 0 5%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 1000;
 }
 
 .logo {
-    font-size: 28px;
+    font-size: clamp(20px, 2.5vw, 28px);
     text-transform: uppercase;
     letter-spacing: 4px;
     color: #00f5ff;
@@ -40,6 +41,7 @@ nav {
 .navbar {
     list-style: none;
     display: flex;
+    align-items: center;
 }
 
 .navbar li {
@@ -74,43 +76,137 @@ nav a {
 }
 
 .mobile-menu {
-    cursor: pointer;
     display: none;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .mobile-menu div {
     width: 32px;
     height: 2px;
     background: #fff;
-    margin: 8px;
+    margin: 6px 0;
 }
 
-footer {
-    bottom: 0;
-    width: 100%;
-    background-color: #1a1a1a;
+/* MAIN */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 91vh;
     text-align: center;
-    padding: 1rem;
+    padding: 50px 20px;
+}
+
+.main-content h1 {
+    font-size: clamp(24px, 5vw, 48px);
+    margin-bottom: 20px;
+    color: #00f5ff;
+    text-shadow: 0 0 10px #00f5ff;
+}
+
+.main-content p {
+    font-size: clamp(14px, 2.5vw, 20px);
+    max-width: 600px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+/* SOBRE */
+.sobre-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.mapa, .texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 575px;
+    border-radius: 10px;
+}
+
+.texto h1 {
+    font-size: clamp(24px, 4vw, 48px);
+    color: #00f5ff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00f5ff;
+    border-bottom: 3px solid #00f5ff;
+    padding-bottom: 5px;
+    letter-spacing: 3px;
+}
+
+.texto h2 {
+    font-size: clamp(20px, 3vw, 28px);
+    color: #00f5ff;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-left: 5px solid #00f5ff;
+    padding-left: 10px;
+}
+
+.texto p, .texto ul {
+    text-align: justify;
+    font-size: clamp(14px, 2vw, 18px);
+    color: #dddddd;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.texto ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
     border-top: 2px solid #00f5ff;
-    color: #ffffff;
 }
 
 footer p {
-    padding: 0;
     padding-bottom: 1rem;
-    color: #ffffff;
+    font-size: clamp(12px, 2vw, 16px);
 }
 
-.social-icons a {
-    margin: 0 0.5rem;
-    color: white;
-    font-size: 1.2rem;
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 22px;
     transition: color 0.3s;
 }
 
-.social-icons a:hover {
+footer .social-icons a:hover {
     color: #00f5ff;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    .navbar li {
+        margin-left: 16px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -134,142 +230,36 @@ footer p {
     .mobile-menu {
         display: flex;
     }
-}
 
-.main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 91vh;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-@media (max-width: 768px) {
     .main-content {
-        height: auto;
-        padding: 20px;
+        padding: 30px 10px;
     }
-}
-.main-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: #00f5ff;
-    text-shadow: 0 0 10px #00f5ff;
-}
 
-.main-content p {
-    font-size: 20px;
-    max-width: 600px;
-    margin-bottom: 30px;
-    color: #ccc;
-}
-
-.sobre-container {
-    max-width: 1200px;
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-/* google maps  */
-.mapa {
-    flex: 1;
-    min-width: 350px;
-}
-
-.mapa iframe {
-    width: 100%;
-    height: 575px;
-    border-radius: 10px;
-}
-
-/* texto 1 título */
-.texto {
-    flex: 1;
-    min-width: 350px;
-    max-width: 600px;
-    text-align: left;
-    word-break: break-word;
-}
-
-/* texto 2 principal */
-.texto h1 {
-    font-size: 48px;
-    color: #00f5ff;
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px #00f5ff;
-    display: inline-block;
-    padding-bottom: 5px;
-    border-bottom: 3px solid #00f5ff;
-    font-family: 'Orbitron', sans-serif;
-    letter-spacing: 3px;
-}
-
-.texto h2 {
-    font-size: 28px;
-    color: #00f5ff;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    border-left: 5px solid #00f5ff;
-    padding-left: 10px;
-}
-
-.texto p {
-    text-align: justify;
-    font-size: 18px;
-    color: #dddddd;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-.texto ul {
-    list-style: disc;
-    padding-left: 20px;
-    font-size: 18px;
-    color: #dddddd;
-    line-height: 1.8;
-}
-
-/* Footer */
-footer {
-    margin-top: 50px;
-    padding: 20px;
-    background-color: #111;
-    color: #fff;
-    text-align: center;
-}
-
-footer .social-icons {
-    margin-top: 10px;
-}
-
-footer .social-icons a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 22px;
-    transition: color 0.3s;
-}
-
-footer .social-icons a:hover {
-    color: #00f5ff;
-}
-
-@media (max-width: 768px) {
     .sobre-container {
         flex-direction: column;
         align-items: center;
     }
 
-    .mapa, .texto {
-        max-width: 100%;
-    }
-
     .mapa iframe {
         height: 300px;
+    }
+
+    .navbar li {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    footer .social-icons a {
+        font-size: 18px;
+    }
+
+    footer {
+        padding: 15px 10px;
     }
 }
