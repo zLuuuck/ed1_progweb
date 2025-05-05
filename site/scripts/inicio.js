@@ -24,6 +24,10 @@ function showSuccess(message) {
     msgSuccess.style.display = "block";
     msgSuccess.style.color = "green";
     document.querySelector("button[type='button']").disabled = true;
+    setTimeout(() => {
+        msgSuccess.style.display = "none";
+        msgSuccess.textContent = "";
+    }, 5000);
 }
 
 function showError(message) {
@@ -31,4 +35,8 @@ function showError(message) {
     msgError.textContent = message;
     msgError.style.display = "block";
     msgError.style.color = "red";
+    setTimeout(() => {
+        msgError.style.display = "none";
+        msgError.textContent = "";
+    }, 5000);
 }

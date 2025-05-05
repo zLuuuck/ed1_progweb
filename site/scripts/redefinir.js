@@ -13,6 +13,11 @@ document.querySelectorAll(".fa-eye").forEach((btn) => {
     });
 });
 
+if (localStorage.getItem("token")) {
+    alert('Você já está logado!');
+    window.location.href = "/site/html/index.html";
+}
+
 function showSuccess(message) {
     const msgSuccess = document.querySelector("#msgSuccess");
     msgSuccess.textContent = message;

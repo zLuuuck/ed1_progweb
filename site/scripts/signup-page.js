@@ -16,6 +16,11 @@ document.querySelectorAll(".fa-eye").forEach((btn) => {
     });
 });
 
+if (localStorage.getItem("token")) {
+    alert('Você já está logado!');
+    window.location.href = "/site/html/index.html";
+}
+
 let user = document.querySelector("#userInput");
 let userLabel = document.querySelector("#userLabel");
 let validUser = false;
@@ -36,7 +41,7 @@ let msgError = document.querySelector("#msgError");
 let msgSuccess = document.querySelector("#msgSuccess");
 
 user.addEventListener("keyup", () => {
-    if (user.value.length <= 3) {
+    if (user.value.length <= 2) {
         userLabel.setAttribute('style', 'color: red')
         userLabel.innerHTML = 'Nome *Insira no mínimo 3 caracteres'
         user.setAttribute('style', 'border-color: red')
@@ -91,7 +96,6 @@ senhaConfirm.addEventListener("keyup", () => {
 
 function signup() {
     if (validUser && validEmail && validSenha && validSenhaConfirm) {
-        // Corrigido para usar o mesmo nome de chave ('listaUsers')
         let listaUsers = JSON.parse(localStorage.getItem('listaUsers') || '[]')
 
         const emailExistente = listaUsers.some(user => user.email === email.value);
@@ -118,17 +122,12 @@ function signup() {
         localStorage.setItem('listaUsers', JSON.stringify(listaUsers))
 
         showSuccess('Cadastro realizado com sucesso! Você será redirecionado para a tela de login!')
-        msgError.setAttribute('style', 'display: none')
-        msgError.innerHTML = ''
 
         setTimeout(() => {
             window.location.href = '/site/html/conta/login.html'
         }, 3000)
     } else {
-        msgError.setAttribute('style', 'display: block')
-        msgError.innerHTML = 'Preencha todos os campos corretamente!'
-        msgSuccess.setAttribute('style', 'display: none')
-        msgSuccess.innerHTML = ''
+        showError('Preencha todos os campos corretamente!')
     }
 }
 
@@ -138,4 +137,15 @@ function showSuccess(message) {
     msgSuccess.style.display = "block";
     msgSuccess.style.color = "green";
     document.querySelector("button[type='button']").disabled = true;
+}
+
+function showError(message) {
+    const msgError = document.querySelector("#msgError");
+    msgError.textContent = message;
+    msgError.style.display = "block";
+    msgError.style.color = "red";
+    setTimeout(() => {
+        msgError.style.display = "none";
+        msgError.textContent = "";
+    }, 5000);
 }

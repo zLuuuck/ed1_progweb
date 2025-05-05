@@ -83,8 +83,9 @@ function atualizarResumo() {
 const cardIcon = document.getElementById("cardBrandIcon");
 const cardPatterns = {
     visa: /^4/,
-    mastercard: /^5[1-5]/,
+    mastercard: /^(5[1-5][0-9]{0,}|2(2[2-9][0-9]{0,}|2[3-9][0-9]{0,}|[3-6][0-9]{2}|7[01][0-9]|720))/,
     amex: /^3[47]/,
+    elo: /^(4011(78|79)|431274|438935|451416|457393|457631|457632|504175|5067[0-6]|50677[0-8]|509[0-9]{3}|627780|636297|636368|6500(31|33|35|36|37)|6504(85|86|87|88)|6507(00|01|02|03|04|05|06|07|08|09)|6516(52|53|54|55)|6550(00|01|02|03|04|05|06|07|08|09))/,
 };
 
 function detectCardBrand(number) {
@@ -106,8 +107,15 @@ document.getElementById("cardNumber").addEventListener("input", (e) => {
 });
 
 function updateCardIcon(brand) {
-    if (brand) {
-        cardIcon.style.backgroundImage = `url('https://img.icons8.com/color/48/000000/${brand}.png')`;
+    const iconUrls = {
+        visa: "https://img.icons8.com/color/48/000000/visa.png",
+        mastercard: "https://img.icons8.com/color/48/000000/mastercard.png",
+        amex: "https://img.icons8.com/color/48/000000/amex.png",
+        elo: "https://images.icon-icons.com/2341/PNG/512/elo_payment_method_card_icon_142740.png",
+    };
+
+    if (brand && iconUrls[brand]) {
+        cardIcon.style.backgroundImage = `url('${iconUrls[brand]}')`;
     } else {
         cardIcon.style.backgroundImage = "";
     }

@@ -1,3 +1,8 @@
+if (localStorage.getItem("token")) {
+    alert('Você já está logado!');
+    window.location.href = "/site/html/index.html";
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const formulario = document.getElementById("formularioRecuperar");
     const msgSuccess = document.getElementById("msgSuccess");

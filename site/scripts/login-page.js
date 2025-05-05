@@ -8,6 +8,12 @@ document.querySelector(".fa-eye").addEventListener("click", function () {
         this.classList.replace("fa-eye-slash", "fa-eye");
     }
 });
+
+if (localStorage.getItem("token")) {
+    alert('Você já está logado!');
+    window.location.href = "/site/html/index.html";
+}
+
 // Função de login
 async function login() {
     const usernameInput = document.querySelector("#userInput").value.trim();
@@ -72,20 +78,19 @@ function showError(message) {
     let userLabel = document.querySelector("#userLabel");
     let senhaLabel = document.querySelector("#senhaLabel");
 
-    userInput.setAttribute("style", "border-color: red");
-    userLabel.setAttribute("style", "color: red");
-    senhaLabel.setAttribute("style", "color: red");
-    senhaInput.setAttribute("style", "border-color: red");
+    userInput.classList.add("erro-input");
+    userLabel.classList.add("erro-label");
+    senhaInput.classList.add("erro-input");
+    senhaLabel.classList.add("erro-label");
     setTimeout(() => {
         msgError.style.display = "none";
         msgError.textContent = "";
-        userInput.setAttribute("style", "border-color: #000000");
-        userLabel.setAttribute("style", "color: #000000");
-        senhaLabel.setAttribute("style", "color: #000000");
-        senhaInput.setAttribute("style", "border-color: #000000");
+        userInput.classList.remove("erro-input");
+        userLabel.classList.remove("erro-label");
+        senhaInput.classList.remove("erro-input");
+        senhaLabel.classList.remove("erro-label");
         userInput.value = "";
         senhaInput.value = "";
-        userInput.focus();
         userLabel.innerHTML = "Usuário";
         senhaLabel.innerHTML = "Senha";
     }, 5000);
