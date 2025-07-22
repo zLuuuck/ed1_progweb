@@ -1,3 +1,5 @@
+![tuiti](imgs/tuiti.png)
+
 <h1>ESTUDO DIRIGIDO DO 1º BIMESTRE</h1>
 <h3>Programação Web</h3>
 <br>
